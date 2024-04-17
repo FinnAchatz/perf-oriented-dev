@@ -1,0 +1,253 @@
+#########################################
+################ ssca2 ##################
+#########################################
+==1463934== Massif, a heap profiler
+==1463934== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==1463934== Using Valgrind-3.19.0 and LibVEX; rerun with -h for copyright info
+==1463934== Command: ./ssca2 17
+==1463934== 
+
+HPCS SSCA Graph Analysis Benchmark v2.2
+Running...
+
+SCALE: 17
+
+Scalable Data Generator -- genScalData() beginning execution...
+
+	genScalData() completed execution
+
+Kernel 1 -- computeGraph() beginning execution...
+
+	computeGraph() completed execution
+
+Kernel 2 -- getStartLists() beginning execution...
+
+	getStartLists() completed execution
+
+Max. int wt. list size is 7
+
+Kernel 3 -- findSubGraphs() beginning execution...
+Search from <13182, 109675>, number of vertices visited: 5438
+Search from <32829, 100045>, number of vertices visited: 127
+Search from <33409, 54807>, number of vertices visited: 12946
+Search from <36635, 112892>, number of vertices visited: 1870
+Search from <37070, 31191>, number of vertices visited: 71218
+Search from <78658, 52103>, number of vertices visited: 3486
+Search from <125999, 88322>, number of vertices visited: 6357
+
+	findSubGraphs() completed execution
+
+Kernel 4 -- betweennessCentrality() beginning execution...
+==1463934== 
+63.33user 0.12system 1:08.31elapsed 92%CPU (0avgtext+0avgdata 52968maxresident)k
+0inputs+88outputs (0major+10311minor)pagefaults 0swaps
+
+HPCS SSCA Graph Analysis Benchmark v2.2
+Running...
+
+SCALE: 17
+
+Scalable Data Generator -- genScalData() beginning execution...
+
+	genScalData() completed execution
+
+Kernel 1 -- computeGraph() beginning execution...
+
+	computeGraph() completed execution
+
+Kernel 2 -- getStartLists() beginning execution...
+
+	getStartLists() completed execution
+
+Max. int wt. list size is 7
+
+Kernel 3 -- findSubGraphs() beginning execution...
+Search from <13182, 109675>, number of vertices visited: 5438
+Search from <32829, 100045>, number of vertices visited: 127
+Search from <33409, 54807>, number of vertices visited: 12946
+Search from <36635, 112892>, number of vertices visited: 1870
+Search from <37070, 31191>, number of vertices visited: 71218
+Search from <78658, 52103>, number of vertices visited: 3486
+Search from <125999, 88322>, number of vertices visited: 6357
+
+	findSubGraphs() completed execution
+
+Kernel 4 -- betweennessCentrality() beginning execution...
+
+ Performance counter stats for './ssca2 17':
+
+     4,290,074,462      L1-dcache-load-misses:u   #   37.76% of all L1-dcache accesses  (57.14%)
+    11,360,060,997      L1-dcache-loads:u                                             (57.14%)
+       182,304,325      L1-dcache-prefetch-misses:u                                     (57.14%)
+       161,971,303      L1-dcache-prefetches:u                                        (57.15%)
+       652,995,401      L1-dcache-store-misses:u                                      (57.15%)
+     2,656,015,470      L1-dcache-stores:u                                            (57.14%)
+           575,550      L1-icache-load-misses:u                                       (57.14%)
+
+      32.219746736 seconds time elapsed
+
+      31.882944000 seconds user
+       0.012836000 seconds sys
+
+
+31.90user 0.02system 0:32.26elapsed 98%CPU (0avgtext+0avgdata 27404maxresident)k
+0inputs+16outputs (0major+7656minor)pagefaults 0swaps
+
+
+
+#########################################
+############### npb_bt_a #################
+#########################################
+==1464357== Massif, a heap profiler
+==1464357== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==1464357== Using Valgrind-3.19.0 and LibVEX; rerun with -h for copyright info
+==1464357== Command: ./npb_bt_a
+==1464357== 
+
+
+ NAS Parallel Benchmarks (NPB3.3-OMP-C) - BT Benchmark
+
+ No input file inputbt.data. Using compiled defaults
+ Size:   64x  64x  64
+ Iterations:  200       dt:   0.0008000
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Verification being performed for class A
+ accuracy setting for epsilon =  1.0000000000000E-08
+ Comparison of RMS-norms of residual
+           1 1.0806346714637E+02 1.0806346714637E+02 7.4957683679475E-15
+           2 1.1319730901221E+01 1.1319730901221E+01 4.7077713814080E-15
+           3 2.5974354511582E+01 2.5974354511582E+01 5.7446653560951E-15
+           4 2.3665622544679E+01 2.3665622544679E+01 1.1409217698756E-14
+           5 2.5278963211749E+02 2.5278963211748E+02 1.1917819470629E-14
+ Comparison of RMS-norms of solution error
+           1 4.2348416040525E+00 4.2348416040525E+00 2.0973120195338E-16
+           2 4.4390282496996E-01 4.4390282496996E-01 0.0000000000000E+00
+           3 9.6692480136346E-01 9.6692480136346E-01 2.2963999331895E-16
+           4 8.8302063039765E-01 8.8302063039765E-01 0.0000000000000E+00
+           5 9.7379901770829E+00 9.7379901770829E+00 1.8241513978733E-16
+ Verification Successful
+
+
+ BT Benchmark Completed.
+ Class           =                        A
+ Size            =             64x  64x  64
+ Iterations      =                      200
+ Total threads   =                        1
+ Avail threads   =                        1
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              11 Nov 2013
+
+ Compile options:
+    CC           = gcc
+    CLINK        = $(CC)
+    C_LIB        = -lm
+    C_INC        = (none)
+    CFLAGS       = (unknown)
+    CLINKFLAGS   = (unknown)
+    RAND         = (none)
+
+--------------------------------------
+ Please send all errors/feedbacks to:
+ Center for Manycore Programming
+ cmp@aces.snu.ac.kr
+ http://aces.snu.ac.kr
+--------------------------------------
+
+==1464357== 
+650.80user 0.11system 10:52.89elapsed 99%CPU (0avgtext+0avgdata 71324maxresident)k
+0inputs+48outputs (0major+6582minor)pagefaults 0swaps
+
+
+ NAS Parallel Benchmarks (NPB3.3-OMP-C) - BT Benchmark
+
+ No input file inputbt.data. Using compiled defaults
+ Size:   64x  64x  64
+ Iterations:  200       dt:   0.0008000
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Verification being performed for class A
+ accuracy setting for epsilon =  1.0000000000000E-08
+ Comparison of RMS-norms of residual
+           1 1.0806346714637E+02 1.0806346714637E+02 7.4957683679475E-15
+           2 1.1319730901221E+01 1.1319730901221E+01 4.7077713814080E-15
+           3 2.5974354511582E+01 2.5974354511582E+01 5.7446653560951E-15
+           4 2.3665622544679E+01 2.3665622544679E+01 1.1409217698756E-14
+           5 2.5278963211749E+02 2.5278963211748E+02 1.1917819470629E-14
+ Comparison of RMS-norms of solution error
+           1 4.2348416040525E+00 4.2348416040525E+00 2.0973120195338E-16
+           2 4.4390282496996E-01 4.4390282496996E-01 0.0000000000000E+00
+           3 9.6692480136346E-01 9.6692480136346E-01 2.2963999331895E-16
+           4 8.8302063039765E-01 8.8302063039765E-01 0.0000000000000E+00
+           5 9.7379901770829E+00 9.7379901770829E+00 1.8241513978733E-16
+ Verification Successful
+
+
+ BT Benchmark Completed.
+ Class           =                        A
+ Size            =             64x  64x  64
+ Iterations      =                      200
+ Total threads   =                        1
+ Avail threads   =                        1
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              11 Nov 2013
+
+ Compile options:
+    CC           = gcc
+    CLINK        = $(CC)
+    C_LIB        = -lm
+    C_INC        = (none)
+    CFLAGS       = (unknown)
+    CLINKFLAGS   = (unknown)
+    RAND         = (none)
+
+--------------------------------------
+ Please send all errors/feedbacks to:
+ Center for Manycore Programming
+ cmp@aces.snu.ac.kr
+ http://aces.snu.ac.kr
+--------------------------------------
+
+
+ Performance counter stats for './npb_bt_a 17':
+
+     6,818,701,082      L1-dcache-load-misses:u   #    4.35% of all L1-dcache accesses  (57.14%)
+   156,684,612,589      L1-dcache-loads:u                                             (57.14%)
+     1,880,420,768      L1-dcache-prefetch-misses:u                                     (57.14%)
+     3,435,103,183      L1-dcache-prefetches:u                                        (57.14%)
+     2,423,093,173      L1-dcache-store-misses:u                                      (57.14%)
+    73,911,188,378      L1-dcache-stores:u                                            (57.14%)
+        46,233,325      L1-icache-load-misses:u                                       (57.14%)
+
+      73.384779451 seconds time elapsed
+
+      72.660546000 seconds user
+       0.014707000 seconds sys
+
+
+72.67user 0.02system 1:13.42elapsed 99%CPU (0avgtext+0avgdata 46468maxresident)k
+0inputs+24outputs (0major+2559minor)pagefaults 0swaps
