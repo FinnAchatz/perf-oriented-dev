@@ -36,7 +36,7 @@ Kernel 4 -- betweennessCentrality() beginning execution...
 
  Performance counter stats for './ssca2 17':
 
-     4,129,953,633      L1-dcache-load-misses:u   #   36.35% of all L1-dcache accesses  (57.14%)
+     4,129,953,633      L1-dcache-load-misses:u   36.35% of all L1-dcache accesses  (57.14%)
     11,362,653,613      L1-dcache-loads:u                                             (57.14%)
        181,248,869      L1-dcache-prefetch-misses:u                                     (57.14%)
        168,552,526      L1-dcache-prefetches:u                                        (57.14%)
