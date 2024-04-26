@@ -57,7 +57,7 @@ int main(void) {
   for (int ti=0; ti < N/TILE_X; ti++){
     for (int tj=0; tj < M/TILE_Y; tj++){
       for (int i=TILE_X*ti; i < MIN(TILE_X*(ti+1),N); i++) {
-        for (int j=TILE_Y*ti; j < MIN(TILE_Y*(tj+1),M); j++) {
+        for (int j=TILE_Y*tj; j < MIN(TILE_Y*(tj+1),M); j++) {
           A[i][j] = i*j;
         }
       }
@@ -69,7 +69,7 @@ int main(void) {
   for (int ti=0; ti < N/TILE_X; ti++){
     for (int tj=0; tj < M/TILE_Y; tj++){
       for (int i=TILE_X*ti; i < MIN(TILE_X*(ti+1),N); i++) {
-        for (int j=TILE_Y*ti; j < MIN(TILE_Y*(tj+1),M); j++) {
+        for (int j=TILE_Y*tj; j < MIN(TILE_Y*(tj+1),M); j++) {
           B[i][j] = (i==j)?1:0;
         }
       }
@@ -103,10 +103,10 @@ int main(void) {
    * If tiles don't fit prefectly MIN() takes care. So last tile in row/col is smaller 
    * I don't tile the innermost loop, as that's not easely possible TODO? */
 
-  for (int ti=0; ti < N/TILE_X; ti++){
-    for (int tj=0; tj < K/TILE_Y; tj++){
-      for (int i=TILE_X*ti; i < MIN(TILE_X*(ti+1),N); i++) {
-        for (int j=TILE_Y*ti; j < MIN(TILE_Y*(tj+1),K); j++) {
+  for (int ti=0; ti < N; ti += TILE_X){
+    for (int tj=0; tj < K; tj += TILE_Y){
+      for (int i=ti; i < MIN(TILE_X + ti, N); i++) {
+        for (int j=tj; j < MIN(TILE_Y + tj, K); j++) {
 
           TYPE sum = 0;
           for (int k=0; k<M; k++) {

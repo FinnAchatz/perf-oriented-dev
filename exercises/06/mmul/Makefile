@@ -1,7 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -Wpedantic -std=c11 -O3
 
-TILE_SIZES = 64 128 256 512 1024
+#TILE_SIZES = 64 128 256 512 1024
+TILE_SIZES = 128 256
 
 # Generate combinations of TILE_X, TILE_Y
 COMBINATIONS = $(foreach x,$(TILE_SIZES),$(foreach y,$(TILE_SIZES),TILE_X=$(x) TILE_Y=$(y)))
