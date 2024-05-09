@@ -46,42 +46,49 @@ and the main computation loop:
 ```c
 for (int ti=0; ti < N; ti += TILE_X){
   for (int tj=0; tj < K; tj += TILE_Y){
-    for (int i=ti; i < MIN(TILE_X + ti, N); i++) {
-      for (int j=tj; j < MIN(TILE_Y + tj, K); j++) {
-
-        TYPE sum = 0;
-        for (int k=0; k<M; k++) {
-          sum += A[i][k] * B[k][j];
+    for (int tk=0; tk < M; tk += 16){
+      for (int i=ti; i < MIN(TILE_X + ti, N); i++) {
+        for (int j=tj; j < MIN(TILE_Y + tj, K); j++) {
+          TYPE sum = 0;
+          for (int k=tk; k < MIN(16 + tk, M); k++) {
+            sum += A[i][k] * B[k][j];
+          }
+          C[i][j] += sum;
         }
-        C[i][j] = sum;
-
       }
     }
   }
 }
 ```
 
-Running some tests with different tile sizes we get the following times (means over 5 runs)
+Here I added tiling of the inner loop rather last-minute, so I didn't do proper measurements. But I don't think I got major improvements.
+
+Running some tests with different tile sizes we get the following times (means over 12 runs, removing values with a z score bigger then 3):
+
+>The reference has a mean of 71.86s and std of 0.7395.
 
 ### apply tiling only on initialization
-![](./mmul/init.png) 
+![](./mmul/init_mean.png) 
 ### apply tiling only on main loop 
-![](./mmul/mult.png) 
+![](./mmul/mult_mean.png) 
 ### apply tiling on both init and main
-![](./mmul/both.png) 
+![](./mmul/both_mean.png) 
 
+and the following medians:
+### apply tiling only on initialization
+![](./mmul/init_median.png) 
+### apply tiling only on main loop 
+![](./mmul/mult_median.png) 
+### apply tiling on both init and main
+![](./mmul/both_median.png) 
 
+### The best times look as follows:
+![mean](./mmul/top_means.png) 
+![median](./mmul/top_medians.png) 
+![max](./mmul/top_maxs.png) 
+![min](./mmul/top_mins.png) 
 
-B) Cache investigation
-----------------------
-
-Think about (and/or research) how you would implement a benchmark to measure cache latencies over progressively larger memory blocks, as seen in the lecture on memory optimization. Precisely explain its working principle and how it determines access latency while avoiding unintended effects.
-
-
-C) Cache benchmark (optional)
------------------------------
-
-Implement your idea from B). Use the resulting program to measure and plot the access latency on LCC3 compute nodes for blocks of size 512 Byte to 16 MiB, in powers of 2.
+> I think something went pretty wrong in my tiling , as there should be major time improvements.
 
 
 Submission

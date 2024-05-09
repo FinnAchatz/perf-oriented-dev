@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define S 512
+#define S 1024
 #define N S
 #define M S
 #define K S
@@ -105,15 +105,15 @@ int main(void) {
 
   for (int ti=0; ti < N; ti += TILE_X){
     for (int tj=0; tj < K; tj += TILE_Y){
-      for (int i=ti; i < MIN(TILE_X + ti, N); i++) {
-        for (int j=tj; j < MIN(TILE_Y + tj, K); j++) {
-
-          TYPE sum = 0;
-          for (int k=0; k<M; k++) {
-            sum += A[i][k] * B[k][j];
+      for (int tk=0; tk < M; tk += 16){
+        for (int i=ti; i < MIN(TILE_X + ti, N); i++) {
+          for (int j=tj; j < MIN(TILE_Y + tj, K); j++) {
+            TYPE sum = 0;
+            for (int k=tk; k < MIN(16 + tk, M); k++) {
+              sum += A[i][k] * B[k][j];
+            }
+            C[i][j] += sum;
           }
-          C[i][j] = sum;
-
         }
       }
     }
@@ -121,7 +121,6 @@ int main(void) {
 
 #else
   /* NO tiling of multiplication loop. */
-
 	for (int i=0; i<N; i++) {
 		for (int j=0; j<K; j++) {
 			TYPE sum = 0;
