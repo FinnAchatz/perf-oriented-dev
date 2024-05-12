@@ -5,7 +5,6 @@
 
 #include <string.h>
 
-#define INIT_SIZE_FACTOR_DYN 1
 
 typedef struct {
 	int64_t repeats;
