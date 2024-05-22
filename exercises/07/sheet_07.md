@@ -32,6 +32,25 @@ Perform 3 sets of benchmarks:
 
 Chart and report the CPU time, wall time and peak memory consumption for each of these.
 
+---
+
+The allocators can be built as stated on their GitHub pages, to get their `.so` files.  
+I put the allscale git repo in the scratch folder.
+
+To run ninja using our allocator, the `LD_PRELOAD` variable can be set to the `.so` file.
+
+## CPU Time
+![CPU Time in user mode (s)](./A/user_mallocs.png)
+
+## Wall time 
+![wall time (s)](./A/real_mallocs.png) 
+
+## Peak memory (KB)
+![peak memory (KB)](./A/max_mallocs.png) 
+
+For some weird reason I don't get the expected results. 
+I would expect the default malloc to have a higher wall time.
+
 
 B) Implementing a special-purpose allocator
 -------------------------------------------
@@ -45,6 +64,16 @@ Report the benchmark time for the default allocator, and your bump allocator, fo
 ```bash
 ./malloctest 1 500 1000000 10 1000
 ```
+
+---
+
+I implemented two arena allocators. One with a fixed arena size and one, which doubles the arena size in case it runs out of memory.
+
+I set the arena size to the upper limit (iteration * upper) for the fixed size. For the dynamic allocator I set it to different fractions (*1, *.8, *.6, *.5, *.4, *.3, *.2) of the upper limit.
+
+malloc takes by far the most time, but needs the least amount of memory.
+
+![](./B/time_arenaalloc.png)
 
 
 Submission

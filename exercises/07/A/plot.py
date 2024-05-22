@@ -15,15 +15,17 @@ df = pd.concat([df_std, df_rp, df_mi])
 df_2 = df[df.groupby(["version"])['real'].transform(stats.zscore).abs() < 3]
 #
 grouped = df_2.groupby(["version"]).mean().reset_index()
-# grouped["text"] = ["$\mu=${0:.2f}\n$\sigma=${1:.2f}".format(mean,std) for mean,std in zip(grouped["mean"], grouped["std"])]
 
 print(grouped)
 
 
-for prop in ["real", "kernel", "user", "max", "avg"]:
+for prop in ["real", "kernel", "user", "max"]:
     data = grouped[["version", prop]]
     print(data)
     ylim = (data[prop].min() * 0.9, data[prop].min() * 1.1)
-    ax = data.plot.bar(x="version", rot=0, ylim=ylim, figsize=(10,8))
+    # ax = data.plot.bar(x="version", rot=0, ylim=ylim, figsize=(10,8))
+    ax = data.plot.bar(x="version", rot=0, figsize=(10,8))
+    ax.bar_label(ax.containers[0])
+    plt.savefig(f"{prop}_mallocs.png")
     plt.show()
 

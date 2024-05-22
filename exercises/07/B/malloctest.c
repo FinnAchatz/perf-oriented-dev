@@ -30,15 +30,15 @@ void* benchmark_thread(void *args) {
 		unsigned seed = 0;
 		void **allocations = (void**)calloc(t_args->iterations, sizeof(void*));
 #ifdef DYNAMIC
-    arena_data* arena = init_arena(t_args->iterations * t_args->upper * INIT_SIZE_FACTOR_DYN);
+		arena_data* arena = init_arena(t_args->iterations * t_args->upper * INIT_SIZE_FACTOR_DYN);
 #else  
-    arena_data* arena = init_arena(t_args->iterations * t_args->upper);
+    	arena_data* arena = init_arena(t_args->iterations * t_args->upper);
 #endif /* ifdef DYNAMIC */
 		for(int64_t i = 0; i < t_args->iterations; ++i) {
 			int64_t to_alloc = rand_r(&seed) % (t_args->upper - t_args->lower) + t_args->lower;
 			allocations[i] = alloc_arena(arena, to_alloc);
 		}
-    free_arena(arena);
+		free_arena(arena);
 		free(allocations);
 	}
 	return NULL;

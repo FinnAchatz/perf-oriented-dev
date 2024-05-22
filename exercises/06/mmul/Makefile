@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -Wpedantic -std=c11 -O3
 
 #TILE_SIZES = 64 128 256 512 1024
-TILE_SIZES = 128 256
+TILE_SIZES = 16 32
 
 # Generate combinations of TILE_X, TILE_Y
 COMBINATIONS = $(foreach x,$(TILE_SIZES),$(foreach y,$(TILE_SIZES),TILE_X=$(x) TILE_Y=$(y)))
@@ -16,7 +16,7 @@ EXECUTABLES_MULT = $(foreach x,$(TILE_SIZES),$(foreach y,$(TILE_SIZES),mmul_MULT
 EXECUTABLES_INIT = $(foreach x,$(TILE_SIZES),$(foreach y,$(TILE_SIZES),mmul_INIT_$(x)_$(y)))
 EXECUTABLES_INIT_MULT = $(foreach x,$(TILE_SIZES),$(foreach y,$(TILE_SIZES),mmul_INIT_MULT_$(x)_$(y)))
 
-all: $(EXECUTABLES_MULT) $(EXECUTABLES_INIT) $(EXECUTABLES_INIT_MULT) mmul_REFERENCE
+all: $(EXECUTABLES_MULT) $(EXECUTABLES_INIT) $(EXECUTABLES_INIT_MULT) mmul_REFERENCE 
 
 define compile_rule
 mmul_MULT_$(x)_$(y): mmul.c
