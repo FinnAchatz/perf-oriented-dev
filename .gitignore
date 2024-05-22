@@ -12,3 +12,4 @@ tools/build_debug
 tools/build_release
 exercises/06/mmul/build
 exercises/06/mmul/__pycache__
+**.zip
