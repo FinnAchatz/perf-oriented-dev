@@ -9,7 +9,7 @@ struct data_structure {
 void *init_data_structure(size_t size) {
   struct data_structure* ds = malloc(sizeof(struct data_structure));
   ds->length = size;
-  ds->array = malloc(sizeof(element)*size+1);
+  ds->array = malloc(sizeof(element)*(size * 1));
   for (size_t i = 0; i < size; i++) {
     ds->array[i].value = i;
   }
@@ -31,6 +31,10 @@ void insert_element(void *data_structure, size_t index, element elem) {
 }
 
 element read_element(void *data_structure, size_t index) {
+  struct data_structure* ds = data_structure;
+  element* elems = ds->array;
+  element elem = elems[index];
+  return elem;
   return ((struct data_structure*)data_structure)->array[index];
 }
 

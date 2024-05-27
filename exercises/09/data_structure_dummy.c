@@ -12,11 +12,11 @@ void destroy_data_structue(void* data_structure){
 }
 
 void write_element(void* data_structure, size_t index, element elem){
-  printf("write %d at %ld\n", elem, index);
+  printf("write %d at %ld\n", elem.value, index);
 }
 
 void insert_element(void* data_structure, size_t index, element elem){
-    printf("insert %d at %ld\n", elem, index);
+    printf("insert %d at %ld\n", elem.value, index);
 }
 
 element read_element(void* data_structure, size_t index){
