@@ -9,14 +9,14 @@
 #define INSTRUCTION_MIX 50 // 0 1 10 50% ins/del
 #endif
 
-#define READ x = read_element(ds, get_next_index(&index, DS_SIZE));
+#define READ x.value = read_element(ds, get_next_index(&index, DS_SIZE))->value;
 #define WRITE                                                                  \
     x.value *= 3;                                                              \
     write_element(ds, get_next_index(&index, DS_SIZE), x);
 #define INSERT                                                                 \
     x.value *= 3;                                                              \
     insert_element(ds, get_next_index(&index, DS_SIZE), x);
-#define DELETE x = delete_element(ds, get_next_index(&index, DS_SIZE));
+#define DELETE delete_element(ds, get_next_index(&index, DS_SIZE));
 
 size_t get_next_index(size_t *index, int mod) {
     *index = ((*index) + 1) % mod;
@@ -30,35 +30,32 @@ void benchmark(int repetitions, int instruction_mix) {
 
     void *ds = init_data_structure(DS_SIZE);
 
-    write_element(ds, 0, x);
-    read_element(ds, 0);
-
-    // if (instruction_mix == 0) { // 100% read/write
-    //     for (int rep = 0; rep < repetitions; rep++) {
-    //         for (int i = 0; i < 50; i++) {
-    //             READ WRITE
-    //         }
-    //     }
-    // } else if (instruction_mix == 1) { // 99% read/write
-    //     for (int rep = 0; rep < repetitions; rep++) {
-    //         for (int i = 0; i < 24; i++) {
-    //             READ WRITE
-    //         }
-    //         READ INSERT WRITE for (int i = 0; i < 24; i++){READ WRITE} DELETE
-    //     }
-    // } else if (instruction_mix == 10) { // 90% read/write
-    //     for (int rep = 0; rep < repetitions; rep++) {
-    //         for (int i = 0; i < 10; i++) {
-    //             READ WRITE READ WRITE INSERT READ WRITE READ WRITE DELETE
-    //         }
-    //     }
-    // } else { // 50% read/write
-    //     for (int rep = 0; rep < repetitions; rep++) {
-    //         for (int i = 0; i < 25; i++) {
-    //             READ INSERT WRITE DELETE
-    //         }
-    //     }
-    // }
+    if (instruction_mix == 0) { // 100% read/write
+        for (int rep = 0; rep < repetitions; rep++) {
+            for (int i = 0; i < 50; i++) {
+                READ WRITE
+            }
+        }
+    } else if (instruction_mix == 1) { // 99% read/write
+        for (int rep = 0; rep < repetitions; rep++) {
+            for (int i = 0; i < 24; i++) {
+                READ WRITE
+            }
+            READ INSERT WRITE for (int i = 0; i < 24; i++){READ WRITE} DELETE
+        }
+    } else if (instruction_mix == 10) { // 90% read/write
+        for (int rep = 0; rep < repetitions; rep++) {
+            for (int i = 0; i < 10; i++) {
+                READ WRITE READ WRITE INSERT READ WRITE READ WRITE DELETE
+            }
+        }
+    } else { // 50% read/write
+        for (int rep = 0; rep < repetitions; rep++) {
+            for (int i = 0; i < 25; i++) {
+                READ INSERT WRITE DELETE
+            }
+        }
+    }
 
     destroy_data_structue(ds);
 

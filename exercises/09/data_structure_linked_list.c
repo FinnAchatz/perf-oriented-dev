@@ -85,30 +85,27 @@ void insert_element(void *data_structure, size_t index, element elem) {
   node->next = new;
 }
 
-element read_element(void *data_structure, size_t index) {
+element* read_element(void *data_structure, size_t index) {
   struct node* node = ((struct head*)data_structure)->head;
   for (size_t i = 0; i < index; i++) {
     node = node->next;
   }
-  return node->elem;
+  return &node->elem;
 }
 
-element delete_element(void *data_structure, size_t index) {
+void delete_element(void *data_structure, size_t index) {
   struct node* node = ((struct head*)data_structure)->head;
   if (index == 0){
-    element elem = node->elem;
     ((struct head*)data_structure)->head = node->next;
     free(node);
-    return elem;
+    return;
   }
   for (size_t i = 1; i < index; i++) {
     node = node->next;
   }
   struct node* to_delete = node->next;
   node->next = to_delete->next;
-  element elem = to_delete->elem;
   free(to_delete);
-  return elem;
 }
 
 size_t get_size(void* data_structure) {

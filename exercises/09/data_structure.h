@@ -20,7 +20,7 @@ void destroy_data_structue(void* data_structure);
 
 void write_element(void* data_structure, size_t index, element elem);
 void insert_element(void* data_structure, size_t index, element elem);
-element read_element(void* data_structure, size_t index);
-element delete_element(void* data_structure, size_t index);
+element* read_element(void* data_structure, size_t index);
+void delete_element(void* data_structure, size_t index);
 
 #endif

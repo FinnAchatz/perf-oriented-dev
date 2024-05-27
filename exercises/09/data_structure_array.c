@@ -30,19 +30,13 @@ void insert_element(void *data_structure, size_t index, element elem) {
   ds->array[index] = elem;
 }
 
-element read_element(void *data_structure, size_t index) {
-  struct data_structure* ds = data_structure;
-  element* elems = ds->array;
-  element elem = elems[index];
-  return elem;
-  return ((struct data_structure*)data_structure)->array[index];
+element* read_element(void *data_structure, size_t index) {
+  return &((struct data_structure*)data_structure)->array[index];
 }
 
-element delete_element(void *data_structure, size_t index) {
+void delete_element(void *data_structure, size_t index) {
   struct data_structure* ds = data_structure;
-  element elem = ds->array[index];
   for (size_t i = index; i < ds->length; i++) {
     ds->array[i] = ds->array[i+1];
   }
-  return elem;
 }

@@ -1,6 +1,8 @@
 #include "data_structure.h"
 #include <stdio.h>
 
+element dummy = {.value = 1};
+
 void* init_data_structure(size_t size){
   printf("inti data structure\n");
   return malloc(1);
@@ -19,12 +21,11 @@ void insert_element(void* data_structure, size_t index, element elem){
     printf("insert %d at %ld\n", elem.value, index);
 }
 
-element read_element(void* data_structure, size_t index){
+element* read_element(void* data_structure, size_t index){
     printf("read at %ld\n", index);
-    return (element)1;
+    return &dummy;
 }
 
-element delete_element(void* data_structure, size_t index){
+void delete_element(void* data_structure, size_t index){
   printf("delete at %ld\n", index);
-  return (element)2;
 }
