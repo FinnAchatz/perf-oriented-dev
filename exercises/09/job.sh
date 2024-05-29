@@ -14,7 +14,7 @@
 #SBATCH --exclusive
 
 # set parameters 
-MIN_TIME=0.1
+MIN_TIME=1
 CSV_PATH="../../values.csv"
 
 # set stack size

@@ -1,38 +1,10 @@
-# import pandas as pd
-# import seaborn as sns
-# import matplotlib.pyplot as plt
-# import itertools
-# from scipy import stats
-# import glob
-#
-#
-# df = pd.read_csv("values.csv")
-#
-# print(df)
-#
-# df["name"] = [n + str(es) + str(im) + str(ne) for n, es, im, ne in zip(df["name"], df["elem_size"], df["ins_mix"], df["num_elems"])]
-#
-# df2 = df[["name", "repetitions"]]
-#
-#
-#
-# grouped = df2.groupby(["name"])
-#
-# print(grouped)
-#
-# # ylim = (data[prop].min() * 0.9, data[prop].min() * 1.1)
-# ax = grouped.plot.bar(x="name", rot=25, figsize=(10,8), log=True)
-# # ax.bar_label(ax.containers[0])
-# plt.savefig("time_arenaalloc.png")
-# plt.show()
-#
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
+import numpy as np
 
 # Load the data into a pandas DataFrame
-file_path = 'values.csv'  # Change this to your actual file path
+file_path = 'values_lcc3.csv'  # Change this to your actual file path
 data = pd.read_csv(file_path)
 
 # Create an output directory for the plots
@@ -45,30 +17,37 @@ grouped_data = data.groupby(['elem_size', 'num_elems'])
 # Create bar plots for each configuration of elem_size and num_elems
 for (elem_size, num_elems), group in grouped_data:
     ins_mix_values = group['ins_mix'].unique()
+    name_values = group['name'].unique()
     num_ins_mix = len(ins_mix_values)
-    
-    fig, axes = plt.subplots(nrows=1, ncols=num_ins_mix, figsize=(15, 6), sharey=True)
-    
-    if num_ins_mix == 1:
-        axes = [axes]
-    
-    for ax, ins_mix in zip(axes, ins_mix_values):
-        subset = group[group['ins_mix'] == ins_mix]
-        ax.bar(subset['name'], subset['repetitions'], color='skyblue')
+    num_names = len(name_values) 
 
-        # Set the y-axis to log scale and start from a small positive number
-        ax.set_yscale('log')
-        ax.set_ylim(bottom=1)  # Start y-axis from 1 
-
-        # Adding labels and title
-        ax.set_xlabel('Data Structure')
-        ax.set_title(f'ins_mix={ins_mix}')
-        ax.set_xticklabels(subset['name'], rotation=45)
+    fig, ax = plt.subplots(figsize=(15, 6))
     
-    # Set common ylabel and overall title
-    fig.supylabel('Repetitions')
-    fig.suptitle(f'Repetitions for elem_size={elem_size}, num_elems={num_elems}', fontsize=16)
+    bar_width = 0.2
+    index = np.arange(num_ins_mix)
     
+    for i, name in enumerate(name_values):
+        subset = group[group['name'] == name]
+        repetitions = subset.set_index('ins_mix').reindex(ins_mix_values)['repetitions'].values
+        bar_positions = index + i * bar_width
+        bars = ax.bar(bar_positions, repetitions, bar_width, label=f'name={name}')
+        
+        # Add the number of repetitions above each bar
+        for bar in bars:
+            height = bar.get_height()
+            ax.text(bar.get_x() + bar.get_width() / 2, height, f'{int(height)}', 
+                    ha='center', va='bottom', fontsize=10)
+    
+    # Adding labels and title
+    ax.set_xlabel('Data Structure')
+    ax.set_ylabel('Repetitions (log scale)')
+    ax.set_title(f'Repetitions for elem_size={elem_size}, num_elems={num_elems}', fontsize=16)
+    ax.set_xticks(index + bar_width * (num_names - 1) / 2)
+    ax.set_xticklabels(ins_mix_values, rotation=45)
+    ax.set_yscale('log')
+    ax.set_ylim(bottom=1)
+    ax.legend()
+    ax.grid(axis='y') 
     plt.tight_layout(rect=[0, 0, 1, 0.95])
     
     # Save the plot as a PNG file
