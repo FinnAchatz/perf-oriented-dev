@@ -4,6 +4,7 @@
 #include <time.h>
 
 #include "data_structure.h"
+#include "test_data_structure.h"
 
 #define READ x.value = read_element(ds, get_next_index(&index, ds_size))->value;
 #define WRITE                                                                  \
@@ -61,7 +62,7 @@ void benchmark(double min_time_sec, int instruction_mix, int ds_size) {
         counter++;
     }
 
-    destroy_data_structue(ds);
+    destroy_data_structure(ds);
 
     int rand_sum = 0;
     char buff_cpy[ELEM_SIZE];
@@ -83,8 +84,28 @@ int main(int argc, char *argv[]) {
     double exec_time = atof(argv[1]);
     int instruction_mix = atoi(argv[2]);
     int ds_size = atoi(argv[3]);
+  #ifdef TEST 
+    run_all_tests();
+  #endif /* ifdef TEST  */
 
-    benchmark(exec_time, instruction_mix, ds_size);
+  #ifndef DEBUG
+    // benchmark(exec_time, instruction_mix, ds_size);
+  #else 
+    // void* ds = init_data_structure(ds_size);
+    // insert_element(ds, 1, (element){.value=-11});
+    // insert_element(ds, 4, (element){.value=-33});
+    // delete_element(ds, 4);
+    // read_element(ds, 5);
+    // write_element(ds, 4, (element){.value=-99});
+    // delete_element(ds, 4);
+    // read_element(ds, 5);
+    // delete_element(ds, 4);
+    // insert_element(ds, 4, (element){.value=-22});
+    // delete_element(ds, 4);
+    // read_element(ds, 5);
+    // 
+    // destroy_data_structure(ds);
+  #endif /* ifdef DEBUG */
 
     return EXIT_SUCCESS;
 }
