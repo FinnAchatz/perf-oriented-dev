@@ -44,14 +44,6 @@ Some additional notes on implementation specifics:
  * For linked lists, to simulate a more realistic use case, allocate and free a new element each time insertion/deletion happens (you can also, optionally and additionally, benchmark using a single re-used element)
  * For linked lists, implement 2 different allocation policies: one which allocates the elements in sequence (as in, how they will be connected and traversed), and one which allocates them in a random order.
 
----
-
-TODO: 
-* Change prototypes to take value or reference as 8M element is too big for stack
-    * alternatively increase stack (works by: `ulimit -s 131072` for 128 MB)
-
-
-
 
 B) Array-like vs. Linked Lists
 ------------------------------
@@ -74,6 +66,45 @@ Run these benchmarks **on LCC3**, and also on some local hardware available to y
 **Number of Elements**: 10, 1000, 100000, 10000000
 
 Plot and discuss your results.
+
+---
+
+Results are somewhat as expected.
+## Plots lcc3 (number of 100 instructions in 5 second):
+### Element size = 8 Byte
+The expectect result for the following plot would be, that array is the fastest. I think this is not shown in the plot, as there is too much other overhead.  
+![](plots_lcc3/repetitions_elem_size_%208_num_elems_10.png)  
+Here I didn't think that array would be that much faster. This may be due to caching.  
+![](plots_lcc3/repetitions_elem_size_%208_num_elems_1000.png)  
+This results stay quite similar, the difference is getting bigger  
+![](plots_lcc3/repetitions_elem_size_%208_num_elems_100000.png)
+![](plots_lcc3/repetitions_elem_size_%208_num_elems_10000000.png)
+### Element size = 512 Byte  
+Results are similar as before, but differences between array and linked list are smaller.  
+![](plots_lcc3/repetitions_elem_size_%20512_num_elems_10.png)
+![](plots_lcc3/repetitions_elem_size_%20512_num_elems_1000.png)
+![](plots_lcc3/repetitions_elem_size_%20512_num_elems_100000.png)
+![](plots_lcc3/repetitions_elem_size_%20512_num_elems_10000000.png)
+### Element size = 8 MByte
+difference for linked list disapears, probably as the overhead is bigger for gigantic elements.  
+![](plots_lcc3/repetitions_elem_size_%208M_num_elems_10.png)
+![](plots_lcc3/repetitions_elem_size_%208M_num_elems_1000.png)
+
+
+## Plots local (number of 100 instructions in 1 second):
+### Element size = 8 Byte
+![](plots_local/repetitions_elem_size_%208_num_elems_10.png)
+![](plots_local/repetitions_elem_size_%208_num_elems_1000.png)
+![](plots_local/repetitions_elem_size_%208_num_elems_100000.png)
+![](plots_local/repetitions_elem_size_%208_num_elems_10000000.png)
+### Element size = 512 Byte
+![](plots_local/repetitions_elem_size_%20512_num_elems_10.png)
+![](plots_local/repetitions_elem_size_%20512_num_elems_1000.png)
+![](plots_local/repetitions_elem_size_%20512_num_elems_100000.png)
+![](plots_local/repetitions_elem_size_%20512_num_elems_10000000.png)
+### Element size = 8 MByte
+![](plots_local/repetitions_elem_size_%208M_num_elems_10.png)
+![](plots_local/repetitions_elem_size_%208M_num_elems_1000.png)
 
 Submission
 ----------

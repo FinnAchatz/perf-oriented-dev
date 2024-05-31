@@ -4,11 +4,12 @@ import os
 import numpy as np
 
 # Load the data into a pandas DataFrame
-file_path = 'values_lcc3.csv'  # Change this to your actual file path
+postfix = 'local'
+file_path = f'values_{postfix}.csv'  # Change this to your actual file path
+output_dir = f'plots_{postfix}'
 data = pd.read_csv(file_path)
 
 # Create an output directory for the plots
-output_dir = 'plots'
 os.makedirs(output_dir, exist_ok=True)
 
 # Group the data by elem_size and num_elems
@@ -21,10 +22,13 @@ for (elem_size, num_elems), group in grouped_data:
     num_ins_mix = len(ins_mix_values)
     num_names = len(name_values) 
 
-    fig, ax = plt.subplots(figsize=(15, 6))
+    fig, ax = plt.subplots(figsize=(15, 5))
     
     bar_width = 0.2
     index = np.arange(num_ins_mix)
+
+    # Calculate the maximum number of repetitions for this group
+    max_repetitions = group['repetitions'].max()
     
     for i, name in enumerate(name_values):
         subset = group[group['name'] == name]
@@ -32,19 +36,18 @@ for (elem_size, num_elems), group in grouped_data:
         bar_positions = index + i * bar_width
         bars = ax.bar(bar_positions, repetitions, bar_width, label=f'name={name}')
         
-        # Add the number of repetitions above each bar
+        # Add the number of repetitions and percentage above each bar
         for bar in bars:
             height = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width() / 2, height, f'{int(height)}', 
-                    ha='center', va='bottom', fontsize=10)
-    
+            percentage = (height / max_repetitions) * 100
+            ax.text(bar.get_x() + bar.get_width() / 2, height, f'{int(height)}\n({percentage:.1f}%)', ha='center', va='bottom', fontsize=10) 
+
     # Adding labels and title
-    ax.set_xlabel('Data Structure')
-    ax.set_ylabel('Repetitions (log scale)')
+    ax.set_xlabel('Instruction mix (% insert/delete)')
+    ax.set_ylabel('Repetitions (log scale, in hundered)')
     ax.set_title(f'Repetitions for elem_size={elem_size}, num_elems={num_elems}', fontsize=16)
     ax.set_xticks(index + bar_width * (num_names - 1) / 2)
     ax.set_xticklabels(ins_mix_values, rotation=45)
-    ax.set_yscale('log')
     ax.set_ylim(bottom=1)
     ax.legend()
     ax.grid(axis='y') 

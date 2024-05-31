@@ -15,7 +15,7 @@
 
 # set parameters 
 MIN_TIME=1
-CSV_PATH="../../values.csv"
+CSV_PATH="../../values_local.csv"
 
 # set stack size
 ulimit -s 131072 

@@ -1,4 +1,4 @@
-name, elem_size, ins_mix, num_elems, repetitions, time, control, control2, control3
+name,elem_size,ins_mix,num_elems,repetitions,time,control,control2,control3
 array, 8, 0, 10, 4271637, 5.000000, 24, 24, 8
 linked list, 8, 0, 10, 4084894, 5.000000, 24, 24, 8
 linked list (alt.), 8, 0, 10, 4082555, 5.000000, 24, 24, 8
