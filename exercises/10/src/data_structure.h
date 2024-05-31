@@ -16,7 +16,7 @@ union custom_elem {
 typedef union custom_elem element;
 
 void* init_data_structure(size_t size);
-void destroy_data_structue(void* data_structure);
+void destroy_data_structure(void* data_structure);
 
 void write_element(void* data_structure, size_t index, element elem);
 void insert_element(void* data_structure, size_t index, element elem);

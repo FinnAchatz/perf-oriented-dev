@@ -48,7 +48,7 @@ void *init_data_structure(size_t size) {
 }
 #endif
 
-void destroy_data_structue(void *data_structure) {
+void destroy_data_structure(void *data_structure) {
   struct node* node = ((struct head*)data_structure)->head;
   free(data_structure);
   struct node* next;

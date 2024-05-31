@@ -16,7 +16,7 @@ void *init_data_structure(size_t size) {
   return ds;
 }
 
-void destroy_data_structue(void *data_structure) { free(data_structure); }
+void destroy_data_structure(void *data_structure) { free(data_structure); }
 
 void write_element(void *data_structure, size_t index, element elem) {
   ((struct data_structure*)data_structure)->array[index] = elem;
