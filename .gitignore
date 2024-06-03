@@ -26,3 +26,4 @@ exercises/10/src/build
 exercises/10/src/data_structure_tiered_list.o
 exercises/10/src/test_data_structure.o
 exercises/10/src/test
+.ccls-cache/
