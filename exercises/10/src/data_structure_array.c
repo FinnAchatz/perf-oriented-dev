@@ -1,4 +1,5 @@
 #include "data_structure.h"
+#include <stdio.h>
 
 typedef struct {
     size_t length;
@@ -8,7 +9,7 @@ typedef struct {
 void *init_data_structure(size_t size) {
     data_structure_t *ds = malloc(sizeof(data_structure_t));
     ds->length = size;
-    ds->array = malloc(sizeof(element) * size);
+    ds->array = malloc(size * sizeof(element));
     return ds;
 }
 
@@ -23,7 +24,7 @@ void write_element(void *data_structure, size_t index, element elem) {
 
 void insert_element(void *data_structure, size_t index, element elem) {
     data_structure_t *ds = data_structure;
-    for (size_t i = ds->length; i > index; i--) {
+    for (size_t i = ds->length - 1; i > index; i--) {
         ds->array[i] = ds->array[i - 1];
     }
     ds->array[index] = elem;
