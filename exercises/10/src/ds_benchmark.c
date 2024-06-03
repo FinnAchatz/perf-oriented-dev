@@ -6,21 +6,32 @@
 #include "data_structure.h"
 #include "test_data_structure.h"
 
-#define READ x.value = read_element(ds, get_next_index(&index, ds_size))->value;
+#define READ                                                                   \
+    do {                                                                       \
+        x.value = read_element(ds, get_next_index(&index, ds_size))->value;    \
+    } while (0)
 #define WRITE                                                                  \
-    x.value *= 3;                                                              \
-    write_element(ds, get_next_index(&index, ds_size), x);
+    do {                                                                       \
+        x.value *= 3;                                                          \
+        write_element(ds, get_next_index(&index, ds_size), x);                 \
+    } while (0)
 #define INSERT                                                                 \
-    x.value *= 3;                                                              \
-    insert_element(ds, get_next_index(&index, ds_size), x);
-#define DELETE delete_element(ds, get_next_index(&index, ds_size));
+    do {                                                                       \
+        x.value *= 3;                                                          \
+        insert_element(ds, get_next_index(&index, ds_size), x);                \
+    } while (0)
+#define DELETE                                                                 \
+    do {                                                                       \
+        delete_element(ds, get_next_index(&index, ds_size));                   \
+    } while (0)
 
 #define DIFF_SEC(START, CURR)                                                  \
-    ((CURR.tv_sec - START.tv_sec) + ((CURR.tv_nsec - START.tv_nsec) / 1000000000.0))
+    ((CURR.tv_sec - START.tv_sec) +                                            \
+     ((CURR.tv_nsec - START.tv_nsec) / 1000000000.0))
+
 #ifndef CONF
 #define CONF
-#endif /* ifndef CONF
- */
+#endif
 
 size_t get_next_index(size_t *index, int mod) {
     *index = ((*index) + 1) % mod;
@@ -42,20 +53,41 @@ void benchmark(double min_time_sec, int instruction_mix, int ds_size) {
     while (DIFF_SEC(start_ts, curr_ts) < min_time_sec) {
         if (instruction_mix == 0) { // 100% read/write
             for (int i = 0; i < 50; i++) {
-                READ WRITE
+                READ;
+                WRITE;
             }
         } else if (instruction_mix == 1) { // 99% read/write
             for (int i = 0; i < 24; i++) {
-                READ WRITE
+                READ;
+                WRITE;
             }
-            READ INSERT WRITE for (int i = 0; i < 24; i++){READ WRITE} DELETE
+            READ;
+            INSERT;
+            WRITE;
+            for (int i = 0; i < 24; i++) {
+                READ;
+                WRITE;
+            }
+            DELETE;
         } else if (instruction_mix == 10) { // 90% read/write
             for (int i = 0; i < 10; i++) {
-                READ WRITE READ WRITE INSERT READ WRITE READ WRITE DELETE
+                READ;
+                WRITE;
+                READ;
+                WRITE;
+                INSERT;
+                READ;
+                WRITE;
+                READ;
+                WRITE;
+                DELETE;
             }
         } else { // 50% read/write
             for (int i = 0; i < 25; i++) {
-                READ INSERT WRITE DELETE
+                READ;
+                INSERT;
+                WRITE;
+                DELETE;
             }
         }
         timespec_get(&curr_ts, TIME_UTC);
@@ -71,9 +103,80 @@ void benchmark(double min_time_sec, int instruction_mix, int ds_size) {
         rand_sum += buff_cpy[i];
     }
 
-    printf(CONF"%d, %d, %lu, %lf, %d, %d, %lu\n", instruction_mix, ds_size, counter, DIFF_SEC(start_ts, curr_ts), x.value, rand_sum, sizeof(element));
+    printf(CONF "%d, %d, %lu, %lf, %d, %d, %lu\n", instruction_mix, ds_size,
+           counter, DIFF_SEC(start_ts, curr_ts), x.value, rand_sum,
+           sizeof(element));
 }
 
+void random_benchmark(double min_time_sec, int instruction_mix, int ds_size) {
+    size_t index = -1;
+    element x;
+    x.value = 1;
+
+    struct timespec start_ts, curr_ts;
+    timespec_get(&start_ts, TIME_UTC);
+    timespec_get(&curr_ts, TIME_UTC);
+    size_t counter = 0;
+
+    void *ds = init_data_structure(ds_size);
+
+    while (DIFF_SEC(start_ts, curr_ts) < min_time_sec) {
+        if (instruction_mix == 0) { // 100% read/write
+            for (int i = 0; i < 50; i++) {
+                READ;
+                WRITE;
+            }
+        } else if (instruction_mix == 1) { // 99% read/write
+            for (int i = 0; i < 24; i++) {
+                READ;
+                WRITE;
+            }
+            READ;
+            INSERT;
+            WRITE;
+            for (int i = 0; i < 24; i++) {
+                READ;
+                WRITE;
+            }
+            DELETE;
+        } else if (instruction_mix == 10) { // 90% read/write
+            for (int i = 0; i < 10; i++) {
+                READ;
+                WRITE;
+                READ;
+                WRITE;
+                INSERT;
+                READ;
+                WRITE;
+                READ;
+                WRITE;
+                DELETE;
+            }
+        } else { // 50% read/write
+            for (int i = 0; i < 25; i++) {
+                READ;
+                INSERT;
+                WRITE;
+                DELETE;
+            }
+        }
+        timespec_get(&curr_ts, TIME_UTC);
+        counter++;
+    }
+
+    destroy_data_structure(ds);
+
+    int rand_sum = 0;
+    char buff_cpy[ELEM_SIZE];
+    memcpy(&buff_cpy, &(x.buff), ELEM_SIZE);
+    for (size_t i = 0; i < ELEM_SIZE; i++) {
+        rand_sum += buff_cpy[i];
+    }
+
+    printf(CONF "%d, %d, %lu, %lf, %d, %d, %lu\n", instruction_mix, ds_size,
+           counter, DIFF_SEC(start_ts, curr_ts), x.value, rand_sum,
+           sizeof(element));
+}
 int main(int argc, char *argv[]) {
     if (argc <= 3) {
         printf("usage: %s <desired execution time (s)> <instruction "
@@ -84,13 +187,13 @@ int main(int argc, char *argv[]) {
     double exec_time = atof(argv[1]);
     int instruction_mix = atoi(argv[2]);
     int ds_size = atoi(argv[3]);
-  #ifdef TEST 
+#ifdef TEST
     run_all_tests();
-  #endif /* ifdef TEST  */
+#endif /* ifdef TEST  */
 
-  #ifndef DEBUG
-    // benchmark(exec_time, instruction_mix, ds_size);
-  #else 
+#ifndef DEBUG
+    benchmark(exec_time, instruction_mix, ds_size);
+#else
     // void* ds = init_data_structure(ds_size);
     // insert_element(ds, 1, (element){.value=-11});
     // insert_element(ds, 4, (element){.value=-33});
@@ -103,9 +206,9 @@ int main(int argc, char *argv[]) {
     // insert_element(ds, 4, (element){.value=-22});
     // delete_element(ds, 4);
     // read_element(ds, 5);
-    // 
+    //
     // destroy_data_structure(ds);
-  #endif /* ifdef DEBUG */
+#endif
 
     return EXIT_SUCCESS;
 }
