@@ -224,6 +224,7 @@ void random_benchmark(double min_time_sec, int instruction_mix, int ds_size) {
            counter, DIFF_SEC(start_ts, curr_ts), x.value, rand_sum,
            sizeof(element));
 }
+
 int main(int argc, char *argv[]) {
     if (argc <= 3) {
         printf("usage: %s <desired execution time (s)> <instruction "
@@ -236,25 +237,25 @@ int main(int argc, char *argv[]) {
     int ds_size = atoi(argv[3]);
 #ifdef TEST
     run_all_tests();
-#endif /* ifdef TEST  */
+#endif
 
 #ifndef DEBUG
     benchmark(exec_time, instruction_mix, ds_size);
 #else
-    // void* ds = init_data_structure(ds_size);
-    // insert_element(ds, 1, (element){.value=-11});
-    // insert_element(ds, 4, (element){.value=-33});
-    // delete_element(ds, 4);
-    // read_element(ds, 5);
-    // write_element(ds, 4, (element){.value=-99});
-    // delete_element(ds, 4);
-    // read_element(ds, 5);
-    // delete_element(ds, 4);
-    // insert_element(ds, 4, (element){.value=-22});
-    // delete_element(ds, 4);
-    // read_element(ds, 5);
-    //
-    // destroy_data_structure(ds);
+    void *ds = init_data_structure(ds_size);
+    insert_element(ds, 1, (element){.value = -11});
+    insert_element(ds, 4, (element){.value = -33});
+    delete_element(ds, 4);
+    read_element(ds, 5);
+    write_element(ds, 4, (element){.value = -99});
+    delete_element(ds, 4);
+    read_element(ds, 5);
+    delete_element(ds, 4);
+    insert_element(ds, 4, (element){.value = -22});
+    delete_element(ds, 4);
+    read_element(ds, 5);
+
+    destroy_data_structure(ds);
 #endif
 
     return EXIT_SUCCESS;
