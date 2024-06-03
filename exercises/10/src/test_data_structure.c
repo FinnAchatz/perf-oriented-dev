@@ -264,3 +264,9 @@ void run_all_tests() {
   run_bigger_tests();
 }
 
+
+int main(void)
+{
+  run_all_tests();
+  return EXIT_SUCCESS;
+}

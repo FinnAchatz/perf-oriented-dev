@@ -23,3 +23,6 @@ exercises/09/src/data_structure_dummy.o
 exercises/09/src/data_structure_linked_list.o
 exercises/09/test
 exercises/10/src/build
+exercises/10/src/data_structure_tiered_list.o
+exercises/10/src/test_data_structure.o
+exercises/10/src/test

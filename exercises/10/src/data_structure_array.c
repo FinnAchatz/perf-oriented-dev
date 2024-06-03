@@ -1,42 +1,41 @@
 #include "data_structure.h"
-#include <stdio.h>
 
-struct data_structure {
-  size_t length;
-  element* array;
-};
+typedef struct {
+    size_t length;
+    element *array;
+} data_structure_t;
 
 void *init_data_structure(size_t size) {
-  struct data_structure* ds = malloc(sizeof(struct data_structure));
-  ds->length = size;
-  ds->array = malloc(sizeof(element)*(size * 1));
-  for (size_t i = 0; i < size; i++) {
-    ds->array[i].value = i;
-  }
-  return ds;
+    data_structure_t *ds = malloc(sizeof(data_structure_t));
+    ds->length = size;
+    ds->array = malloc(sizeof(element) * size);
+    return ds;
 }
 
-void destroy_data_structure(void *data_structure) { free(data_structure); }
+void destroy_data_structure(void *data_structure) {
+    free(((data_structure_t *)data_structure)->array);
+    free(data_structure);
+}
 
 void write_element(void *data_structure, size_t index, element elem) {
-  ((struct data_structure*)data_structure)->array[index] = elem;
+    ((data_structure_t *)data_structure)->array[index] = elem;
 }
 
 void insert_element(void *data_structure, size_t index, element elem) {
-  struct data_structure* ds = data_structure;
-  for (size_t i = ds->length; i > index; i--) {
-    ds->array[i] = ds->array[i-1] ;
-  }
-  ds->array[index] = elem;
+    data_structure_t *ds = data_structure;
+    for (size_t i = ds->length; i > index; i--) {
+        ds->array[i] = ds->array[i - 1];
+    }
+    ds->array[index] = elem;
 }
 
-element* read_element(void *data_structure, size_t index) {
-  return &((struct data_structure*)data_structure)->array[index];
+element *read_element(void *data_structure, size_t index) {
+    return &((data_structure_t *)data_structure)->array[index];
 }
 
 void delete_element(void *data_structure, size_t index) {
-  struct data_structure* ds = data_structure;
-  for (size_t i = index; i < ds->length; i++) {
-    ds->array[i] = ds->array[i+1];
-  }
+    data_structure_t *ds = data_structure;
+    for (size_t i = index; i < ds->length; i++) {
+        ds->array[i] = ds->array[i + 1];
+    }
 }
