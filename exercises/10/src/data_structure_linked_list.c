@@ -53,6 +53,7 @@ void *init_data_structure(size_t size) {
     struct node *node = malloc(sizeof(struct node));
     ds->head = node;
     node->elem.value = -1;
+    size += 1;
     return (void *)ds;
 }
 
