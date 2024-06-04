@@ -137,16 +137,20 @@ static void * next (unrolled_linked_list_i * i) {
 
 static void write_to_next(unrolled_linked_list_i * i, void * value) {
     void * elem = next(i);
-    if (elem == NULL) 
-        return;
+    if (elem == NULL) {
+        to_iter(i, i->manager);
+        elem = next(i);
+    }
 
     memcpy(elem, value, i->manager->element_size);
 }
 
 static void copy_next(unrolled_linked_list_i * i, void * value) {
     void * elem = next(i);
-    if (elem == NULL) 
-        return;
+    if (elem == NULL) {
+        to_iter(i, i->manager);
+        elem = next(i);
+    }
 
     memcpy(value, elem, i->manager->element_size);
 }
@@ -375,3 +379,57 @@ void print_chunk_pointers(unrolled_linked_list_t l) {
 
 // -------------------------------------------------------------------------- //
 
+typedef struct {
+    unrolled_linked_list_t t;
+    unrolled_linked_list_i i;
+} unrolled_linked_list_data_structure;
+
+void* init_data_structure(size_t size) {
+    unrolled_linked_list_t t;
+    init_chunks(&t, ELEM_SIZE, CHUNK_SIZE);
+
+    unrolled_linked_list_i i;
+    to_iter(&t, &i);
+
+    return (unrolled_linked_list_data_structure) {
+        .t = t,
+        .i = i
+    };
+}
+void destroy_data_structure(void* data_structure) {t
+}
+
+void write_element(void* data_structure, size_t index, element elem) {
+    unrolled_linked_list_data_structure * d = (unrolled_linked_list_data_structure *) data_structure;
+    unrolled_linked_list_i * i = &d.i;
+    
+    write_to_next(i, data_structure);
+}
+void insert_element(void* data_structure, size_t index, element elem) {
+    unrolled_linked_list_data_structure * d = (unrolled_linked_list_data_structure *) data_structure;
+    unrolled_linked_list_i * i = &d.i;
+    
+    void * elem = insert_before(i);
+}
+element* read_element(void* data_structure, size_t index) {
+    unrolled_linked_list_data_structure * d = (unrolled_linked_list_data_structure *) data_structure;
+    unrolled_linked_list_i * i = &d.i;
+    
+    void * elem = next(i);
+    if (elem == NULL) {
+        i = to_iter(i->manager, i);
+        elem = next(i);
+    }
+
+    return elem;
+}
+void delete_element(void* data_structure, size_t index) {
+    unrolled_linked_list_data_structure * d = (unrolled_linked_list_data_structure *) data_structure;
+    unrolled_linked_list_i * i = &d.i;
+    
+    void * elem = remove_elem(i);
+    if (elem == NULL) {
+        i = to_iter(i->manager, i);
+        remove_elem(i);
+    }
+}
