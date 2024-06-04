@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <stdbool.h>
 
 #include "data_structure.h"
-#include "test_data_structure.h"
 
 #define READ                                                                   \
     do {                                                                       \
@@ -84,18 +84,40 @@ size_t get_next_index(size_t *index, int mod) {
 #endif
     return *index;
 }
+void fill_data_structure_linear(void* ds, size_t size){
+  for (size_t i = 0; i < size; i++) {
+    insert_element(ds, i, (element){.value=i});
+  }
+}
 
-void benchmark(double min_time_sec, int instruction_mix, int ds_size) {
+void fill_data_structure_random(void* ds, size_t size){
+  insert_element(ds, 0, (element){.value=0});
+  for (size_t i = 1; i < size; i++) {
+    size_t index = ((size_t)next_random()) % i;
+    insert_element(ds, index, (element){.value=i});
+  }
+  for (size_t i = 0; i < size; i++) {
+    write_element(ds, i, (element){.value=i});
+  }
+}
+
+void benchmark(double min_time_sec, int instruction_mix, int ds_size, bool fill_random) {
     size_t index = -1;
     element x;
     x.value = 1;
+
+    void *ds = init_data_structure(ds_size+1);
+    if (fill_random){
+        fill_data_structure_random(ds, ds_size);
+    } else {
+        fill_data_structure_linear(ds, ds_size);
+    }
 
     struct timespec start_ts, curr_ts;
     timespec_get(&start_ts, TIME_UTC);
     timespec_get(&curr_ts, TIME_UTC);
     size_t counter = 0;
 
-    void *ds = init_data_structure(ds_size);
 
     while (DIFF_SEC(start_ts, curr_ts) < min_time_sec) {
         if (instruction_mix == 0) { // 100% read/write
@@ -150,7 +172,7 @@ void benchmark(double min_time_sec, int instruction_mix, int ds_size) {
         rand_sum += buff_cpy[i];
     }
 
-    printf(CONF "%d, %d, %lu, %lf, %d, %d, %lu\n", instruction_mix, ds_size,
+    printf(CONF "%d, %d, %s, %lu, %lf, %d, %d, %lu\n", instruction_mix, ds_size, fill_random ? "True" : "False",
            counter, DIFF_SEC(start_ts, curr_ts), x.value, rand_sum,
            sizeof(element));
 }
@@ -228,35 +250,19 @@ void random_benchmark(double min_time_sec, int instruction_mix, int ds_size) {
 int main(int argc, char *argv[]) {
     if (argc <= 3) {
         printf("usage: %s <desired execution time (s)> <instruction "
-               "mix> <data_structure size>\n",
+               "mix> <data_structure size> [-r random init]\n",
                argv[0]);
         return EXIT_FAILURE;
     }
     double exec_time = atof(argv[1]);
     int instruction_mix = atoi(argv[2]);
     int ds_size = atoi(argv[3]);
-#ifdef TEST
-    run_all_tests();
-#endif
+    bool random_init = false;
+    if (argc == 5 && argv[4][1] == 'r'){
+        random_init = true;
+    }
 
-#ifndef DEBUG
-    benchmark(exec_time, instruction_mix, ds_size);
-#else
-    void *ds = init_data_structure(ds_size);
-    insert_element(ds, 1, (element){.value = -11});
-    insert_element(ds, 4, (element){.value = -33});
-    delete_element(ds, 4);
-    read_element(ds, 5);
-    write_element(ds, 4, (element){.value = -99});
-    delete_element(ds, 4);
-    read_element(ds, 5);
-    delete_element(ds, 4);
-    insert_element(ds, 4, (element){.value = -22});
-    delete_element(ds, 4);
-    read_element(ds, 5);
-
-    destroy_data_structure(ds);
-#endif
+    benchmark(exec_time, instruction_mix, ds_size, random_init);
 
     return EXIT_SUCCESS;
 }
