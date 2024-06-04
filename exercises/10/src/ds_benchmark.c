@@ -84,30 +84,31 @@ size_t get_next_index(size_t *index, int mod) {
 #endif
     return *index;
 }
-void fill_data_structure_linear(void* ds, size_t size){
-  for (size_t i = 0; i < size; i++) {
-    insert_element(ds, i, (element){.value=i});
-  }
+void fill_data_structure_linear(void *ds, size_t size) {
+    for (size_t i = 0; i < size; i++) {
+        insert_element(ds, i, (element){.value = i});
+    }
 }
 
-void fill_data_structure_random(void* ds, size_t size){
-  insert_element(ds, 0, (element){.value=0});
-  for (size_t i = 1; i < size; i++) {
-    size_t index = ((size_t)next_random()) % i;
-    insert_element(ds, index, (element){.value=i});
-  }
-  for (size_t i = 0; i < size; i++) {
-    write_element(ds, i, (element){.value=i});
-  }
+void fill_data_structure_random(void *ds, size_t size) {
+    insert_element(ds, 0, (element){.value = 0});
+    for (size_t i = 1; i < size; i++) {
+        size_t index = ((size_t)next_random()) % i;
+        insert_element(ds, index, (element){.value = i});
+    }
+    for (size_t i = 0; i < size; i++) {
+        write_element(ds, i, (element){.value = i});
+    }
 }
 
-void benchmark(double min_time_sec, int instruction_mix, int ds_size, bool fill_random) {
+void benchmark(double min_time_sec, int instruction_mix, int ds_size,
+               bool fill_random) {
     size_t index = -1;
     element x;
     x.value = 1;
 
-    void *ds = init_data_structure(ds_size+1);
-    if (fill_random){
+    void *ds = init_data_structure(ds_size + 1);
+    if (fill_random) {
         fill_data_structure_random(ds, ds_size);
     } else {
         fill_data_structure_linear(ds, ds_size);
@@ -117,7 +118,6 @@ void benchmark(double min_time_sec, int instruction_mix, int ds_size, bool fill_
     timespec_get(&start_ts, TIME_UTC);
     timespec_get(&curr_ts, TIME_UTC);
     size_t counter = 0;
-
 
     while (DIFF_SEC(start_ts, curr_ts) < min_time_sec) {
         if (instruction_mix == 0) { // 100% read/write
@@ -172,9 +172,9 @@ void benchmark(double min_time_sec, int instruction_mix, int ds_size, bool fill_
         rand_sum += buff_cpy[i];
     }
 
-    printf(CONF "%d, %d, %s, %lu, %lf, %d, %d, %lu\n", instruction_mix, ds_size, fill_random ? "True" : "False",
-           counter, DIFF_SEC(start_ts, curr_ts), x.value, rand_sum,
-           sizeof(element));
+    printf(CONF "%d, %d, %s, %lu, %lf, %d, %d, %lu\n", instruction_mix, ds_size,
+           fill_random ? "True" : "False", counter, DIFF_SEC(start_ts, curr_ts),
+           x.value, rand_sum, sizeof(element));
 }
 
 void random_benchmark(double min_time_sec, int instruction_mix, int ds_size) {
@@ -258,7 +258,7 @@ int main(int argc, char *argv[]) {
     int instruction_mix = atoi(argv[2]);
     int ds_size = atoi(argv[3]);
     bool random_init = false;
-    if (argc == 5 && argv[4][1] == 'r'){
+    if (argc == 5 && argv[4][1] == 'r') {
         random_init = true;
     }
 
