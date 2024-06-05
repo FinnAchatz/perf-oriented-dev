@@ -4,7 +4,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra  -Wpedantic -std=c11 -O3 -g
 
 
-all: ds_benchmark_linked_list ds_benchmark_array ds_benchmark_tiered_list
+all: ds_benchmark_linked_list ds_benchmark_array ds_benchmark_tiered_list ds_benchmark_unrolled_list
 test: test_array test_linked_list test_tiered_list
 
 %.o: %.c
