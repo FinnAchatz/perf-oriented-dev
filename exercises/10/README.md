@@ -19,6 +19,7 @@ Or that the linear insert operations lead to a worse performance for some data s
 - Another bug we were not able to fix: 8M size always is 2 steps
 
 Performance of the linked list compared to the tiered linked list is very similar but noticeable (negative) impact for insertion mix of 0%...
+Random access performs better than standard linked list, but sequential access not.
 Must be some implementation detail as theoretically the data structure should perform as a middle ground between array and linked list.
 
 # Array
