@@ -172,79 +172,10 @@ void benchmark(double min_time_sec, int instruction_mix, int ds_size,
         rand_sum += buff_cpy[i];
     }
 
-    printf(CONF "%d, %d, %s, %lu, %lf, %d, %d, %lu\n", instruction_mix, ds_size,
-           fill_random ? "True" : "False", counter, DIFF_SEC(start_ts, curr_ts),
-           x.value, rand_sum, sizeof(element));
-}
-
-void random_benchmark(double min_time_sec, int instruction_mix, int ds_size) {
-    size_t index = -1;
-    element x;
-    x.value = 1;
-
-    struct timespec start_ts, curr_ts;
-    timespec_get(&start_ts, TIME_UTC);
-    timespec_get(&curr_ts, TIME_UTC);
-    size_t counter = 0;
-
-    void *ds = init_data_structure(ds_size);
-
-    while (DIFF_SEC(start_ts, curr_ts) < min_time_sec) {
-        if (instruction_mix == 0) { // 100% read/write
-            for (int i = 0; i < 50; i++) {
-                READ;
-                WRITE;
-            }
-        } else if (instruction_mix == 1) { // 99% read/write
-            for (int i = 0; i < 24; i++) {
-                READ;
-                WRITE;
-            }
-            READ;
-            INSERT;
-            WRITE;
-            for (int i = 0; i < 24; i++) {
-                READ;
-                WRITE;
-            }
-            DELETE;
-        } else if (instruction_mix == 10) { // 90% read/write
-            for (int i = 0; i < 10; i++) {
-                READ;
-                WRITE;
-                READ;
-                WRITE;
-                INSERT;
-                READ;
-                WRITE;
-                READ;
-                WRITE;
-                DELETE;
-            }
-        } else { // 50% read/write
-            for (int i = 0; i < 25; i++) {
-                READ;
-                INSERT;
-                WRITE;
-                DELETE;
-            }
-        }
-        timespec_get(&curr_ts, TIME_UTC);
-        counter++;
-    }
-
-    destroy_data_structure(ds);
-
-    int rand_sum = 0;
-    char buff_cpy[ELEM_SIZE];
-    memcpy(&buff_cpy, &(x.buff), ELEM_SIZE);
-    for (size_t i = 0; i < ELEM_SIZE; i++) {
-        rand_sum += buff_cpy[i];
-    }
-
-    printf(CONF "%d, %d, %lu, %lf, %d, %d, %lu\n", instruction_mix, ds_size,
-           counter, DIFF_SEC(start_ts, curr_ts), x.value, rand_sum,
-           sizeof(element));
+    // "CONF {name,random_access,elem_size}, ins_mix,
+    // num_elems,fill_random,repetitions
+    printf(CONF "%d,%d,%d,%zu\n", instruction_mix, ds_size, fill_random,
+           counter);
 }
 
 int main(int argc, char *argv[]) {
