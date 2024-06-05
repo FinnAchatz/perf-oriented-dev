@@ -1,0 +1,337 @@
+name,random_access,elem_size,ins_mix,num_elems,fill_random,repetitions
+array,1,8,0,10,0,148010
+array,1,8,0,10,1,147736
+array,0,8,0,10,0,87854
+array,0,8,0,10,1,88271
+linked list,1,8,0,10,0,147150
+linked list,1,8,0,10,1,146443
+linked list,0,8,0,10,0,82705
+linked list,0,8,0,10,1,82660
+tiered list,1,8,0,10,0,133520
+tiered list,1,8,0,10,1,134184
+tiered list,0,8,0,10,0,78289
+tiered list,0,8,0,10,1,78320
+array,1,8,0,1000,0,146877
+array,1,8,0,1000,1,147705
+array,0,8,0,1000,0,87870
+array,0,8,0,1000,1,87376
+linked list,1,8,0,1000,0,147786
+linked list,1,8,0,1000,1,147509
+linked list,0,8,0,1000,0,1570
+linked list,0,8,0,1000,1,1546
+tiered list,1,8,0,1000,0,133593
+tiered list,1,8,0,1000,1,133730
+tiered list,0,8,0,1000,0,68967
+tiered list,0,8,0,1000,1,68611
+array,1,512,0,10,0,51861
+array,1,512,0,10,1,51540
+array,0,512,0,10,0,41470
+array,0,512,0,10,1,41398
+linked list,1,512,0,10,0,53233
+linked list,1,512,0,10,1,53402
+linked list,0,512,0,10,0,39295
+linked list,0,512,0,10,1,39375
+tiered list,1,512,0,10,0,47956
+tiered list,1,512,0,10,1,48204
+tiered list,0,512,0,10,0,37851
+tiered list,0,512,0,10,1,37945
+array,1,512,0,1000,0,51649
+array,1,512,0,1000,1,51821
+array,0,512,0,1000,0,41277
+array,0,512,0,1000,1,41188
+linked list,1,512,0,1000,0,52893
+linked list,1,512,0,1000,1,52905
+linked list,0,512,0,1000,0,1499
+linked list,0,512,0,1000,1,1490
+tiered list,1,512,0,1000,0,47922
+tiered list,1,512,0,1000,1,48342
+tiered list,0,512,0,1000,0,35525
+tiered list,0,512,0,1000,1,35430
+array,1,8M,0,10,0,2
+array,1,8M,0,10,1,2
+array,0,8M,0,10,0,2
+array,0,8M,0,10,1,2
+linked list,1,8M,0,10,0,2
+linked list,1,8M,0,10,1,2
+linked list,0,8M,0,10,0,2
+linked list,0,8M,0,10,1,2
+tiered list,1,8M,0,10,0,2
+tiered list,1,8M,0,10,1,2
+tiered list,0,8M,0,10,0,2
+tiered list,0,8M,0,10,1,2
+array,1,8M,0,1000,0,2
+array,1,8M,0,1000,1,2
+array,0,8M,0,1000,0,2
+array,0,8M,0,1000,1,2
+linked list,1,8M,0,1000,0,2
+linked list,1,8M,0,1000,1,2
+linked list,0,8M,0,1000,0,2
+linked list,0,8M,0,1000,1,2
+tiered list,1,8M,0,1000,0,2
+tiered list,1,8M,0,1000,1,2
+tiered list,0,8M,0,1000,0,2
+tiered list,0,8M,0,1000,1,2
+array,1,8,1,10,0,144482
+array,1,8,1,10,1,144405
+array,0,8,1,10,0,86801
+array,0,8,1,10,1,87237
+linked list,1,8,1,10,0,142700
+linked list,1,8,1,10,1,142538
+linked list,0,8,1,10,0,78655
+linked list,0,8,1,10,1,77779
+tiered list,1,8,1,10,0,131996
+tiered list,1,8,1,10,1,132067
+tiered list,0,8,1,10,0,77125
+tiered list,0,8,1,10,1,76849
+array,1,8,1,1000,0,88998
+array,1,8,1,1000,1,88591
+array,0,8,1,1000,0,72046
+array,0,8,1,1000,1,72532
+linked list,1,8,1,1000,0,143091
+linked list,1,8,1,1000,1,142596
+linked list,0,8,1,1000,0,1569
+linked list,0,8,1,1000,1,1557
+tiered list,1,8,1,1000,0,124534
+tiered list,1,8,1,1000,1,124905
+tiered list,0,8,1,1000,0,17810
+tiered list,0,8,1,1000,1,17840
+array,1,512,1,10,0,50273
+array,1,512,1,10,1,51860
+array,0,512,1,10,0,41140
+array,0,512,1,10,1,41204
+linked list,1,512,1,10,0,51706
+linked list,1,512,1,10,1,51174
+linked list,0,512,1,10,0,38285
+linked list,0,512,1,10,1,38350
+tiered list,1,512,1,10,0,47539
+tiered list,1,512,1,10,1,47236
+tiered list,0,512,1,10,0,37323
+tiered list,0,512,1,10,1,37341
+array,1,512,1,1000,0,42489
+array,1,512,1,1000,1,42502
+array,0,512,1,1000,0,37722
+array,0,512,1,1000,1,37695
+linked list,1,512,1,1000,0,51569
+linked list,1,512,1,1000,1,51463
+linked list,0,512,1,1000,0,1496
+linked list,0,512,1,1000,1,1498
+tiered list,1,512,1,1000,0,46268
+tiered list,1,512,1,1000,1,45937
+tiered list,0,512,1,1000,0,14420
+tiered list,0,512,1,1000,1,14420
+array,1,8M,1,10,0,2
+array,1,8M,1,10,1,2
+array,0,8M,1,10,0,2
+array,0,8M,1,10,1,2
+linked list,1,8M,1,10,0,2
+linked list,1,8M,1,10,1,2
+linked list,0,8M,1,10,0,2
+linked list,0,8M,1,10,1,2
+tiered list,1,8M,1,10,0,2
+tiered list,1,8M,1,10,1,2
+tiered list,0,8M,1,10,0,2
+tiered list,0,8M,1,10,1,2
+array,1,8M,1,1000,0,2
+array,1,8M,1,1000,1,2
+array,0,8M,1,1000,0,2
+array,0,8M,1,1000,1,2
+linked list,1,8M,1,1000,0,2
+linked list,1,8M,1,1000,1,2
+linked list,0,8M,1,1000,0,2
+linked list,0,8M,1,1000,1,2
+tiered list,1,8M,1,1000,0,2
+tiered list,1,8M,1,1000,1,2
+tiered list,0,8M,1,1000,0,2
+tiered list,0,8M,1,1000,1,2
+array,1,8,10,10,0,121878
+array,1,8,10,10,1,118502
+array,0,8,10,10,0,85210
+array,0,8,10,10,1,84921
+linked list,1,8,10,10,0,124321
+linked list,1,8,10,10,1,121712
+linked list,0,8,10,10,0,73616
+linked list,0,8,10,10,1,73662
+tiered list,1,8,10,10,0,117294
+tiered list,1,8,10,10,1,117794
+tiered list,0,8,10,10,0,60036
+tiered list,0,8,10,10,1,62074
+array,1,8,10,1000,0,19655
+array,1,8,10,1000,1,19670
+array,0,8,10,1000,0,29183
+array,0,8,10,1000,1,29172
+linked list,1,8,10,1000,0,124333
+linked list,1,8,10,1000,1,122497
+linked list,0,8,10,1000,0,1551
+linked list,0,8,10,1000,1,1550
+tiered list,1,8,10,1000,0,75674
+tiered list,1,8,10,1000,1,73605
+tiered list,0,8,10,1000,0,16630
+tiered list,0,8,10,1000,1,16550
+array,1,512,10,10,0,49008
+array,1,512,10,10,1,48970
+array,0,512,10,10,0,40638
+array,0,512,10,10,1,40643
+linked list,1,512,10,10,0,48238
+linked list,1,512,10,10,1,48255
+linked list,0,512,10,10,0,36406
+linked list,0,512,10,10,1,36450
+tiered list,1,512,10,10,0,45265
+tiered list,1,512,10,10,1,45722
+tiered list,0,512,10,10,0,33605
+tiered list,0,512,10,10,1,32952
+array,1,512,10,1000,0,15829
+array,1,512,10,1000,1,15810
+array,0,512,10,1000,0,21211
+array,0,512,10,1000,1,21365
+linked list,1,512,10,1000,0,48201
+linked list,1,512,10,1000,1,48264
+linked list,0,512,10,1000,0,1478
+linked list,0,512,10,1000,1,1477
+tiered list,1,512,10,1000,0,38088
+tiered list,1,512,10,1000,1,38469
+tiered list,0,512,10,1000,0,13760
+tiered list,0,512,10,1000,1,13547
+array,1,8M,10,10,0,2
+array,1,8M,10,10,1,2
+array,0,8M,10,10,0,2
+array,0,8M,10,10,1,2
+linked list,1,8M,10,10,0,2
+linked list,1,8M,10,10,1,2
+linked list,0,8M,10,10,0,2
+linked list,0,8M,10,10,1,2
+tiered list,1,8M,10,10,0,2
+tiered list,1,8M,10,10,1,2
+tiered list,0,8M,10,10,0,2
+tiered list,0,8M,10,10,1,2
+array,1,8M,10,1000,0,2
+array,1,8M,10,1000,1,2
+array,0,8M,10,1000,0,2
+array,0,8M,10,1000,1,2
+linked list,1,8M,10,1000,0,2
+linked list,1,8M,10,1000,1,2
+linked list,0,8M,10,1000,0,2
+linked list,0,8M,10,1000,1,2
+tiered list,1,8M,10,1000,0,2
+tiered list,1,8M,10,1000,1,2
+tiered list,0,8M,10,1000,0,2
+tiered list,0,8M,10,1000,1,2
+array,1,8,50,10,0,86308
+array,1,8,50,10,1,86389
+array,0,8,50,10,0,74932
+array,0,8,50,10,1,75850
+linked list,1,8,50,10,0,94450
+linked list,1,8,50,10,1,94483
+linked list,0,8,50,10,0,61071
+linked list,0,8,50,10,1,61427
+tiered list,1,8,50,10,0,98903
+tiered list,1,8,50,10,1,98831
+tiered list,0,8,50,10,0,57017
+tiered list,0,8,50,10,1,57028
+array,1,8,50,1000,0,8447
+array,1,8,50,1000,1,8454
+array,0,8,50,1000,0,14432
+array,0,8,50,1000,1,14431
+linked list,1,8,50,1000,0,94482
+linked list,1,8,50,1000,1,94510
+linked list,0,8,50,1000,0,1535
+linked list,0,8,50,1000,1,1532
+tiered list,1,8,50,1000,0,45907
+tiered list,1,8,50,1000,1,47314
+tiered list,0,8,50,1000,0,14760
+tiered list,0,8,50,1000,1,14403
+array,1,512,50,10,0,44806
+array,1,512,50,10,1,44791
+array,0,512,50,10,0,38031
+array,0,512,50,10,1,37391
+linked list,1,512,50,10,0,41203
+linked list,1,512,50,10,1,42073
+linked list,0,512,50,10,0,32999
+linked list,0,512,50,10,1,33101
+tiered list,1,512,50,10,0,42066
+tiered list,1,512,50,10,1,42066
+tiered list,0,512,50,10,0,31905
+tiered list,0,512,50,10,1,31904
+array,1,512,50,1000,0,7774
+array,1,512,50,1000,1,7721
+array,0,512,50,1000,0,12278
+array,0,512,50,1000,1,12266
+linked list,1,512,50,1000,0,42025
+linked list,1,512,50,1000,1,42075
+linked list,0,512,50,1000,0,1477
+linked list,0,512,50,1000,1,1465
+tiered list,1,512,50,1000,0,28867
+tiered list,1,512,50,1000,1,29271
+tiered list,0,512,50,1000,0,12175
+tiered list,0,512,50,1000,1,12360
+array,1,8M,50,10,0,2
+array,1,8M,50,10,1,2
+array,0,8M,50,10,0,2
+array,0,8M,50,10,1,2
+linked list,1,8M,50,10,0,2
+linked list,1,8M,50,10,1,2
+linked list,0,8M,50,10,0,2
+linked list,0,8M,50,10,1,2
+tiered list,1,8M,50,10,0,2
+tiered list,1,8M,50,10,1,2
+tiered list,0,8M,50,10,0,2
+tiered list,0,8M,50,10,1,2
+array,1,8M,50,1000,0,2
+array,1,8M,50,1000,1,2
+array,0,8M,50,1000,0,2
+array,0,8M,50,1000,1,2
+linked list,1,8M,50,1000,0,2
+linked list,1,8M,50,1000,1,2
+linked list,0,8M,50,1000,0,2
+linked list,0,8M,50,1000,1,2
+tiered list,1,8M,50,1000,0,2
+tiered list,1,8M,50,1000,1,2
+tiered list,0,8M,50,1000,0,2
+tiered list,0,8M,50,1000,1,2
+array,0,8,0,100000,0,87543
+array,1,8,0,100000,0,148029
+linked list,0,8,0,100000,0,94
+linked list,1,8,0,100000,0,147860
+tiered list,0,8,0,100000,0,68907
+tiered list,1,8,0,100000,0,134328
+array,0,8,1,100000,0,2039
+array,1,8,1,100000,0,974
+linked list,0,8,1,100000,0,94
+linked list,1,8,1,100000,0,143732
+tiered list,0,8,1,100000,0,901
+tiered list,1,8,1,100000,0,13529
+array,0,8,10,100000,0,104
+array,1,8,10,100000,0,98
+linked list,0,8,10,100000,0,97
+linked list,1,8,10,100000,0,123948
+tiered list,0,8,10,100000,0,901
+tiered list,1,8,10,100000,0,1483
+array,0,8,50,100000,0,40
+array,1,8,50,100000,0,39
+linked list,0,8,50,100000,0,92
+linked list,1,8,50,100000,0,93807
+tiered list,0,8,50,100000,0,901
+tiered list,1,8,50,100000,0,597
+array,0,512,0,100000,0,41176
+array,1,512,0,100000,0,51842
+linked list,0,512,0,100000,0,94
+linked list,1,512,0,100000,0,52984
+tiered list,0,512,0,100000,0,35561
+tiered list,1,512,0,100000,0,47829
+array,0,512,1,100000,0,2012
+array,1,512,1,100000,0,961
+linked list,0,512,1,100000,0,94
+linked list,1,512,1,100000,0,51773
+tiered list,0,512,1,100000,0,901
+tiered list,1,512,1,100000,0,11344
+array,0,512,10,100000,0,104
+array,1,512,10,100000,0,98
+linked list,0,512,10,100000,0,96
+linked list,1,512,10,100000,0,48069
+tiered list,0,512,10,100000,0,901
+tiered list,1,512,10,100000,0,1442
+array,0,512,50,100000,0,41
+array,1,512,50,100000,0,40
+linked list,0,512,50,100000,0,92
+linked list,1,512,50,100000,0,42082
+tiered list,0,512,50,100000,0,901
+tiered list,1,512,50,100000,0,587
