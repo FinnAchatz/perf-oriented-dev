@@ -193,6 +193,8 @@ int main(int argc, char *argv[]) {
         random_init = true;
     }
 
+    printf("\r");
+
     benchmark(exec_time, instruction_mix, ds_size, random_init);
 
     return EXIT_SUCCESS;
