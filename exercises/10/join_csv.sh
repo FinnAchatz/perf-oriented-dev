@@ -1,0 +1,11 @@
+head -n 1 values_1.csv > values_local.csv
+tail -n +2 values_1.csv >> values_local.csv
+tail -n +2 values_2.csv >> values_local.csv
+tail -n +2 values_3.csv >> values_local.csv
+tail -n +2 values_4.csv >> values_local.csv
+tail -n +2 values_5.csv >> values_local.csv
+tail -n +2 values_unrolled_1.csv >> values_local.csv
+tail -n +2 values_unrolled_2.csv >> values_local.csv
+tail -n +2 values_unrolled_3.csv >> values_local.csv
+tail -n +2 values_unrolled_4.csv >> values_local.csv
+tail -n +2 values_unrolled_5.csv >> values_local.csv

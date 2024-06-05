@@ -1,104 +1,66 @@
-import pandas as pd
+#!/usr/bin/env python
 import matplotlib.pyplot as plt
-import seaborn as sns
-import matplotlib.ticker as mticker
+import pandas as pd
 
-# Read the CSV file
-df = pd.read_csv('values_local.csv')
 
-# # Get the unique combinations of elem_size and num_elems
-# combinations = df[['random_access', 'elem_size', 'num_elems', 'fill_random']].drop_duplicates()
-#
-# # Set up the seaborn style
-# sns.set(style="whitegrid")
-#
-# # Determine unique ins_mix values
-# unique_ins_mix = sorted(df[['ins_mix', 'random_access', 'fill_random']].unique())
-#
-# # Convert 'ins_mix' to a categorical type with a specific order
-# df['ins_mix'] = df['ins_mix'].astype(str)
-#
-# # Iterate through each combination
-# for _, row in combinations.iterrows():
-#     elem_size = row['elem_size']
-#     num_elems = row['num_elems']
-#     fill_random = row['fill_random']
-#     random_access = row['random_access']
-#     
-#     # Filter the dataframe for the current combination
-#     subset = df[(df['elem_size'] == elem_size) & (df['num_elems'] == num_elems) & (df['fill_random'] == fill_random) & (df['random_access'] == random_access)]
-#     
-#     plt.figure()
-#     for name in subset['name'].unique():
-#         subset_name = subset[subset['name'] == name]
-#         plt.plot(subset_name['ins_mix'], subset_name['repetitions'], label=name, marker='o')
-#      
-#     # Set the title and labels
-#     plt.title(f'Performance for elem_size={elem_size}, num_elems={num_elems}, random_access={random_access}, fill_random={fill_random}')
-#     plt.xlabel('% insertions/deletions')
-#     plt.ylabel('repetitions')
-#     
-#     # Show the legend
-#     plt.legend(title='Name')
-#
-#     # Set y-axis to plain format (disable scientific notation)
-#     plt.gca().yaxis.set_major_formatter(mticker.ScalarFormatter(useMathText=False))
-#     plt.gca().yaxis.get_major_formatter().set_useOffset(False)
-#     plt.gca().yaxis.get_major_formatter().set_scientific(False)
-#
-#     
-#     plt.show()
-#
-#     # Save the plot to a file
-#     # plt.savefig(f'plot_elem_size_{elem_size}_num_elems_{num_elems}.png')
-#     # 
-#     # # Close the plot
-#     # plt.close()
+def plot_for_name(df, name):
+    grouped = df.groupby("ins_mix")
+    for ins_mix, group in grouped:
+        fig, axs = plt.subplots(
+            1, len(group["elem_size"].unique()),  # Changed here
+            figsize=(8 * len(group["elem_size"].unique()), 6),  # Changed here
+        )
+        fig.suptitle(f"{name} with {ins_mix}% I/D", fontsize=16)
+        for i, elem_size in enumerate(sorted(group["elem_size"].unique())):
+            group_subset = group[group["elem_size"] == elem_size]
+            ax = axs[i] if len(group["elem_size"].unique()) > 1 else axs
+            ax.set_title(f"Element Size: {elem_size}")
+            for index, row in group_subset.iterrows():
+                label = f"random_access={row['random_access']}"
+                ax.plot(
+                    row["num_elems"],
+                    row["repetitions"],
+                    marker="o",
+                    label=None,
+                    color="blue" if row["random_access"] else "orange",
+                )
+            group_sorted = group_subset.sort_values(by="num_elems")
+            group_random = group_sorted[group_sorted["random_access"] == 1]
+            ax.plot(
+                group_random["num_elems"],
+                group_random["repetitions"],
+                linestyle="-",
+                color="blue",
+                label="random_access=1",
+            )
+            group_not_random = group_sorted[group_sorted["random_access"] == 0]
+            ax.plot(
+                group_not_random["num_elems"],
+                group_not_random["repetitions"],
+                linestyle="-",
+                color="orange",
+                label="random_access=0",
+            )
+            ax.set_xlabel("num_elems")
+            ax.set_xscale("log")  # Set x-axis scale to logarithmic
 
-# Get the unique combinations of elem_size and num_elems
-combinations = df[['elem_size', 'num_elems']].drop_duplicates()
+            ax.set_ylabel("repetitions")
+            ax.set_yscale("log")  # Set y-axis scale to logarithmic
+            ax.legend()
+            ax.grid(True)
 
-# Set up the seaborn style
-sns.set(style="whitegrid")
+        output_path = f"./images/{name}_ins_mix_{ins_mix}.png"
+        plt.savefig(output_path)
+        plt.close()
 
-# Determine unique ins_mix values
-unique_ins_mix = sorted(df['ins_mix'].unique())
 
-# Convert 'ins_mix' to a categorical type with a specific order
-df['ins_mix'] = df['ins_mix'].astype(str)
-
-# Iterate through each combination
-for _, row in combinations.iterrows():
-    elem_size = row['elem_size']
-    num_elems = row['num_elems']
-    
-    # Filter the dataframe for the current combination
-    subset = df[(df['elem_size'] == elem_size) & (df['num_elems'] == num_elems)]
-    
-    plt.figure()
-    for _, name_row in subset[['name', 'random_access', 'fill_random']].drop_duplicates().iterrows():
-        subset_name = subset[(subset['name'] == name_row['name']) & (subset['random_access'] == name_row['random_access']) & (subset['fill_random'] == name_row['fill_random'])]
-        plt.plot(subset_name['ins_mix'], subset_name['repetitions'], label=name_row, marker='o')
-     
-    # Set the title and labels
-    plt.title(f'Performance for elem_size={elem_size}, num_elems={num_elems}')
-    plt.xlabel('% insertions/deletions')
-    plt.ylabel('repetitions')
-    
-    # Show the legend
-    plt.legend(title='Name')
-
-    # Set y-axis to plain format (disable scientific notation)
-    plt.gca().yaxis.set_major_formatter(mticker.ScalarFormatter(useMathText=False))
-    plt.gca().yaxis.get_major_formatter().set_useOffset(False)
-    plt.gca().yaxis.get_major_formatter().set_scientific(False)
-
-    
-    plt.show()
-
-    # Save the plot to a file
-    # plt.savefig(f'plot_elem_size_{elem_size}_num_elems_{num_elems}.png')
-    # 
-    # # Close the plot
-    # plt.close()
-
+if __name__ == "__main__":
+    df = pd.read_csv("./values_local.csv")
+    df_array = df[(df["name"] == "array") & (df["fill_random"] == 0)]
+    plot_for_name(df_array, "array")
+    df_linked = df[(df["name"] == "linked list") & (df["fill_random"] == 0)]
+    plot_for_name(df_linked, "linked_list")
+    df_linked_random = df[(df["name"] == "linked list") & (df["fill_random"] == 1)]
+    plot_for_name(df_linked_random, "linked list random fill")
+    df_tiered= df[(df["name"] == "tiered list") & (df["fill_random"] == 0)]
+    plot_for_name(df_tiered, "linked_list_random_fill")

@@ -15,7 +15,7 @@
 
 # set parameters 
 MIN_TIME=0.1
-CSV_PATH="../../values_1.csv"
+CSV_PATH="../../values_unrolled_1.csv"
 
 # set stack size
 ulimit -s unlimited
@@ -28,7 +28,7 @@ echo "name,random_access,elem_size,ins_mix,num_elems,fill_random,repetitions" >>
 for ins_mix in 0 1 10 50; do 
   for elem_size in 8 512 8M; do 
     for num_elems in 10 1000; do
-      for prog in ds_benchmark_array_ ds_benchmark_linked_list_ ds_benchmark_tiered_list_; do 
+      for prog in ds_benchmark_unrolled_list_; do 
         ./${prog}${elem_size}_random ${MIN_TIME} ${ins_mix} ${num_elems} >> $CSV_PATH
         ./${prog}${elem_size}_random ${MIN_TIME} ${ins_mix} ${num_elems} -r >> $CSV_PATH
         ./${prog}${elem_size} ${MIN_TIME} ${ins_mix} ${num_elems} >> $CSV_PATH
