@@ -16,7 +16,8 @@ The only guess would be that the random generator implementation does not work w
 Or that the linear insert operations lead to a worse performance for some data structures and the random generator leads to an uneven distribution.
 
 - Also interesting, the random initialized linked list is performing better than the sequentially allocated one. Here no code was changed from last week...
-- Another bug we were not able to fix: 8M size always is 2 steps
+- Another bug we were not able to fix: 8M size always is 2 steps Caused by Segmentation fault which we could not debug.
+Was not present last week.
 
 Performance of the linked list compared to the tiered linked list is very similar but noticeable (negative) impact for insertion mix of 0%...
 Random access performs better than standard linked list, but sequential access not.
