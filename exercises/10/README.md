@@ -17,6 +17,7 @@ Or that the linear insert operations lead to a worse performance for some data s
 
 - Also interesting, the random initialized linked list is performing better than the sequentially allocated one. Here no code was changed from last week...
 - Another bug we were not able to fix: 8M size always is 2 steps Caused by Segmentation fault which we could not debug.
+It appears that the Segfault happens even before the input validation check of the main loop... (tested with `valgrind` and using `printf`)
 Was not present last week.
 
 Performance of the linked list compared to the tiered linked list is very similar but noticeable (negative) impact for insertion mix of 0%...
