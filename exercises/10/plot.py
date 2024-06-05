@@ -7,7 +7,8 @@ def plot_for_name(df, name):
     grouped = df.groupby("ins_mix")
     for ins_mix, group in grouped:
         fig, axs = plt.subplots(
-            1, len(group["elem_size"].unique()),  # Changed here
+            1,
+            len(group["elem_size"].unique()),  # Changed here
             figsize=(8 * len(group["elem_size"].unique()), 6),  # Changed here
         )
         fig.suptitle(f"{name} with {ins_mix}% I/D", fontsize=16)
@@ -61,6 +62,6 @@ if __name__ == "__main__":
     df_linked = df[(df["name"] == "linked list") & (df["fill_random"] == 0)]
     plot_for_name(df_linked, "linked_list")
     df_linked_random = df[(df["name"] == "linked list") & (df["fill_random"] == 1)]
-    plot_for_name(df_linked_random, "linked list random fill")
-    df_tiered= df[(df["name"] == "tiered list") & (df["fill_random"] == 0)]
-    plot_for_name(df_tiered, "linked_list_random_fill")
+    plot_for_name(df_linked_random, "linked_list_random_fill")
+    df_tiered = df[(df["name"] == "tiered list") & (df["fill_random"] == 0)]
+    plot_for_name(df_tiered, "tiered_list")

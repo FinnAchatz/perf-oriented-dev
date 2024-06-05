@@ -18,6 +18,12 @@ make all
 ![image](./images/linked_list_ins_mix_10.png)
 ![image](./images/linked_list_ins_mix_50.png)
 
+# Linked List Random Init
+![image](./images/linked_list_random_fill_ins_mix_0.png)
+![image](./images/linked_list_random_fill_ins_mix_1.png)
+![image](./images/linked_list_random_fill_ins_mix_10.png)
+![image](./images/linked_list_random_fill_ins_mix_50.png)
+
 # Tiered List
 ![image](./images/tiered_list_ins_mix_0.png)
 ![image](./images/tiered_list_ins_mix_1.png)
