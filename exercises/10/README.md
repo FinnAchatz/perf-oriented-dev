@@ -79,3 +79,9 @@ Must be some implementation detail as theoretically the data structure should pe
 ![image](./images/tiered_list_ins_mix_1.png)
 ![image](./images/tiered_list_ins_mix_10.png)
 ![image](./images/tiered_list_ins_mix_50.png)
+
+# Unrolled List
+![image](./images/unrolled_list_ins_mix_0.png)
+![image](./images/unrolled_list_ins_mix_1.png)
+![image](./images/unrolled_list_ins_mix_10.png)
+![image](./images/unrolled_list_ins_mix_50.png)

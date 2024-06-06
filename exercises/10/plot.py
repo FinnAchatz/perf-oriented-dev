@@ -65,3 +65,5 @@ if __name__ == "__main__":
     plot_for_name(df_linked_random, "linked_list_random_fill")
     df_tiered = df[(df["name"] == "tiered list") & (df["fill_random"] == 0)]
     plot_for_name(df_tiered, "tiered_list")
+    df_unrolled = df[(df["name"] == "unrolled list") & (df["fill_random"] == 0)]
+    plot_for_name(df_unrolled, "unrolled_list")
