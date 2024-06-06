@@ -1,3 +1,8 @@
+# Team
+Emanuel Prader
+David Rieser
+Finn Achatz
+
 # Build
 
 ```bash
@@ -5,6 +10,33 @@ mkdir src/build
 cd src
 make all
 ```
+
+# Tiered list implementation
+Our tiered list schematically looks as follows:
+```
+[<sub_length> *ptr] -> [x, x, x, x, x, x]  
+[<sub_length> *ptr] -> [x, x, x,  ,  ,  ]  
+[<sub_length> *ptr] -> [x, x, x, x, x,  ]  
+[<sub_length> *ptr] -> [x, x, x, x, x,  ]  
+[<sub_length> *ptr] -> [x, x, x, x,  ,  ]  
+[<sub_length> *ptr] -> [x, x, x, x,  ,  ]  
+[<sub_length> *ptr] -> [x, x, x, x,  ,  ]  
+```
+
+* There is one indirection array (on the left), which holds pointers to the sub array and the number of elements in that subarray.
+
+* The sub arrays hold the elements.
+
+* Translating the index requires a linear traversal of the indirection array (which has constant size in our implementation).
+
+* The interesting operations which require special care are insert and delete:
+    * insert: in the best and normal case, insert inserts the element into the sub array and shifts succeeding elements. 
+    It may happen that the sub array is full and a normal shift is not possible, in that case, the element which would be shifted out of the sub array is recursively inserted into the next sub array.
+    If this happens in the last sub array, there is a overflow in the indirection array:
+        * we shift indirection elements to the left and add new indirection element at the end.
+        * the elements from the dropped array get inserted at beginning (using insert()).
+    * delete: best and normal case as insert(). If sub list is empty -> underflow: get first element from right sub list.
+
 
 # General Observations
 - It appears that a lot of the implementations for 100000 and 10000000 were not able to complete on the lcc...
