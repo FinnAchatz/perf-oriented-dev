@@ -68,3 +68,45 @@ int luaD_pretailcall (lua_State *L, CallInfo *ci, StkId func, int narg1, int del
 25000000 x fibonacci_iter(30) time:  24.3504 s  --  832040
 ```
 Surprisingly doing the same for `ldo.c:588 luaD_precall()` makes the performance worse.
+
+--- 
+
+switching light C function and closure: no boost
+```
+100 x fibonacci_naive(30)     time:  14.0670 s  --  832040
+10000000 x fibonacci_tail(30) time:  12.2697 s  --  832040
+25000000 x fibonacci_iter(30) time:  12.0340 s  --  832040
+```
+
+```c
+CallInfo *luaD_precall (lua_State *L, StkId func, int nresults) {
+ retry:
+  switch (ttypetag(s2v(func))) {
+    case LUA_VLCF:  /* light C function */
+      precallC(L, func, nresults, fvalue(s2v(func)));
+      return NULL;
+    case LUA_VCCL:  /* C closure */
+      precallC(L, func, nresults, clCvalue(s2v(func))->f);
+      return NULL;
+    case LUA_VLCL: {  /* Lua function */
+      CallInfo *ci;
+      Proto *p = clLvalue(s2v(func))->p;
+      int narg = cast_int(L->top.p - func) - 1;  /* number of real arguments */
+      int nfixparams = p->numparams;
+      int fsize = p->maxstacksize;  /* frame size */
+      checkstackGCp(L, fsize, func);
+      L->ci = ci = prepCallInfo(L, func, nresults, 0, func + 1 + fsize);
+      ci->u.l.savedpc = p->code;  /* starting point */
+      for (; narg < nfixparams; narg++)
+        setnilvalue(s2v(L->top.p++));  /* complete missing arguments */
+      lua_assert(ci->top.p <= L->stack_last.p);
+      return ci;
+    }
+    default: {  /* not a function */
+      func = luaD_tryfuncTM(L, func);  /* try to get '__call' metamethod */
+      /* return luaD_precall(L, func, nresults); */
+      goto retry;  /* try again with metamethod */
+    }
+  }
+}
+```

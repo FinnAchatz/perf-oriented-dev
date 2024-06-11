@@ -5,7 +5,7 @@
 # Name your job to be able to identify it later
 #SBATCH --job-name test
 # Redirect output stream to this file
-#SBATCH --output=output3.log
+#SBATCH --output=output.log
 # Maximum number of tasks (=processes) to start in total
 #SBATCH --ntasks=1
 # Maximum number of tasks (=processes) to start per node
@@ -14,7 +14,5 @@
 #SBATCH --exclusive
 
 LUA=/home/cb76/cb761225/lua-5.4.6/src/lua
-$LUA ../../lua/fib.lua
-$LUA ../../lua/fib.lua
 $LUA ../../lua/fib.lua
 
