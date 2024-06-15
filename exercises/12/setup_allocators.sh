@@ -8,11 +8,10 @@ mkdir allocators && cd allocators
 echo -e "${GREEN}Cloning rpmalloc...${NC}"
 git clone https://github.com/mjansson/rpmalloc.git
 
-# Build rpmalloc
+# Build `rpmalloc`
 echo -e "${GREEN}Building rpmalloc...${NC}"
 cd rpmalloc \
     && ./configure.py \
+    # HACK: To fix a compile error on lcc `-Weverything` needs to be removed.
+    && sed -i "s/ -Weverything//g" "./build.ninja" \
     && ninja
-
-# HACK: To fix a compile error on lcc `-Weverything` needs to be removed.
-sed -i "s/ -Weverything//g" "./build.ninja"
