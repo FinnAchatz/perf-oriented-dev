@@ -10,7 +10,7 @@ git clone https://github.com/mjansson/rpmalloc.git
 cd rpmalloc
 ./configure.py && \
 # HACK: To fix a compile error on lcc `-Werror` needs to be removed.
-# sed -i "s/ -Werror//g" "./build.ninja" && \
+sed -i "s/ -Werror//g" "./build.ninja" && \
 ninja
 cd .. # Go back to `allocators` directory.
 
