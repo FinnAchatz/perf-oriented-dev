@@ -13,6 +13,12 @@
 # Enforce exclusive node allocation, do not share with other jobs
 #SBATCH --exclusive
 
-LUA=/home/cb76/cb761225/lua-5.4.6/src/lua
-$LUA ../../lua/fib.lua
 
+ORIGINAL_LUA=./lua-5.4.6/src/lua
+OPTIMIZED_LUA=./lua-5.4.6-optimized/src/lua
+
+echo "running original lua interpreter:"
+${ORIGINAL_LUA} ../../lua/fib.lua
+
+echo "running optimized lua interpreter:"
+${OPTIMIZED_LUA} ../../lua/fib.lua
