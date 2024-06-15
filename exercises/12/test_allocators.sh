@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "testing default"
+./lua-5.4.6/src/lua ../../lua/fib.lua
+
 echo "testing rpmalloc"
 LDD_PRELOAD=./allocators/rpmalloc/bin/linux/release/x86-64/librpmalloc.so ./lua-5.4.6/src/lua ../../lua/fib.lua
 
