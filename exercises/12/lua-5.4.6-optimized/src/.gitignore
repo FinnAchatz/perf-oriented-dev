@@ -1,3 +1,4 @@
 lua
 luac
+liblua.a
 *.o
