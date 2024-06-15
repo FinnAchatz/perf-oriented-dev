@@ -1,0 +1,1684 @@
+desc: (none)
+cmd: lua lua/fib.lua
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2107056
+mem_heap_B=31299
+mem_heap_extra_B=5757
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=116531070287
+mem_heap_B=32978
+mem_heap_extra_B=5862
+mem_stacks_B=0
+heap_tree=detailed
+n3: 32978 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n9: 31426 0x4E59654: ??? (in /usr/lib64/liblua-5.3.so)
+  n2: 11904 0x4E647C7: ??? (in /usr/lib64/liblua-5.3.so)
+   n7: 6016 0x4E48D77: lua_createtable (in /usr/lib64/liblua-5.3.so)
+    n1: 2048 0x4E59548: luaopen_math (in /usr/lib64/liblua-5.3.so)
+     n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 2048 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+            n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n1: 1024 0x4E63D08: luaopen_string (in /usr/lib64/liblua-5.3.so)
+     n1: 1024 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 1024 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 1024 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 1024 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+         n1: 1024 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+          n1: 1024 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+           n1: 1024 0x10A42F: ??? (in /usr/bin/lua)
+            n1: 1024 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 1024 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 1024 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 1024 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 1024 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 1024 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 1024 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 1024 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n0: 896 in 8 places, all below massif's threshold (1.00%)
+    n1: 512 0x4E4D728: luaopen_bit32 (in /usr/lib64/liblua-5.3.so)
+     n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 512 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+         n1: 512 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+          n1: 512 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+           n1: 512 0x10A42F: ??? (in /usr/bin/lua)
+            n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 512 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 512 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 512 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 512 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 512 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n1: 512 0x4E509D8: luaopen_debug (in /usr/lib64/liblua-5.3.so)
+     n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 512 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+         n1: 512 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+          n1: 512 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+           n1: 512 0x10A42F: ??? (in /usr/bin/lua)
+            n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 512 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 512 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 512 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 512 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 512 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n1: 512 0x4E570D8: luaopen_io (in /usr/lib64/liblua-5.3.so)
+     n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 512 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+         n1: 512 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+          n1: 512 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+           n1: 512 0x10A42F: ??? (in /usr/bin/lua)
+            n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 512 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 512 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 512 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 512 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 512 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n1: 512 0x4E5C3A8: luaopen_os (in /usr/lib64/liblua-5.3.so)
+     n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 512 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+         n1: 512 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+          n1: 512 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+           n1: 512 0x10A42F: ??? (in /usr/bin/lua)
+            n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 512 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 512 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 512 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 512 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 512 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n3: 5888 0x4E64B75: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 3840 0x4E67AAC: ??? (in /usr/lib64/liblua-5.3.so)
+     n5: 3840 0x4E47D9E: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+        n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+               n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+      n2: 512 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n1: 512 0x4E5712A: luaopen_io (in /usr/lib64/liblua-5.3.so)
+        n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 512 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+            n1: 512 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+             n1: 512 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+              n1: 512 0x10A42F: ??? (in /usr/bin/lua)
+               n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 512 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 512 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 512 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                     n1: 512 0x10990E: ??? (in /usr/bin/lua)
+                      n0: 512 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n1: 512 0x4E4BDB8: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+       n1: 512 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+        n1: 512 0x10A42F: ??? (in /usr/bin/lua)
+         n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 512 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 512 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 512 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+               n1: 512 0x10990E: ??? (in /usr/bin/lua)
+                n0: 512 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+      n1: 512 0x4E5A810: luaopen_package (in /usr/lib64/liblua-5.3.so)
+       n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 512 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+           n1: 512 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+            n1: 512 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+             n1: 512 0x10A42F: ??? (in /usr/bin/lua)
+              n1: 512 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 512 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 512 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 512 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 512 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 512 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                    n1: 512 0x10990E: ??? (in /usr/bin/lua)
+                     n0: 512 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+      n0: 256 in 2 places, all below massif's threshold (1.00%)
+    n1: 2048 0x4E57882: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 2048 0x4E584B7: ??? (in /usr/lib64/liblua-5.3.so)
+      n2: 2048 0x4E58804: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x4E5EF04: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 2048 0x4E5DB98: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E5DD96: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E5F6E0: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x4E51E66: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x4E52F95: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 2048 0x4E49536: lua_load (in /usr/lib64/liblua-5.3.so)
+                n1: 2048 0x4E4B0DF: luaL_loadfilex (in /usr/lib64/liblua-5.3.so)
+                 n1: 2048 0x10A7B2: ??? (in /usr/bin/lua)
+                  n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                     n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                      n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                       n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                        n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+                         n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+       n0: 0 in 4 places, all below massif's threshold (1.00%)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n5: 10666 0x4E555D1: ??? (in /usr/lib64/liblua-5.3.so)
+   n3: 7662 0x4E601E9: ??? (in /usr/lib64/liblua-5.3.so)
+    n5: 6876 0x4E6049F: ??? (in /usr/lib64/liblua-5.3.so)
+     n2: 4959 0x4E47D65: ??? (in /usr/lib64/liblua-5.3.so)
+      n5: 4644 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n0: 1982 in 9 places, all below massif's threshold (1.00%)
+       n1: 1002 0x4E59559: luaopen_math (in /usr/lib64/liblua-5.3.so)
+        n1: 1002 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 1002 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 1002 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 1002 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+            n1: 1002 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+             n1: 1002 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+              n1: 1002 0x10A42F: ??? (in /usr/bin/lua)
+               n1: 1002 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 1002 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 1002 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 1002 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 1002 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 1002 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                     n1: 1002 0x10990E: ??? (in /usr/bin/lua)
+                      n0: 1002 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+       n1: 768 0x4E4D0F7: luaopen_base (in /usr/lib64/liblua-5.3.so)
+        n1: 768 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 768 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 768 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 768 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+            n1: 768 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+             n1: 768 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+              n1: 768 0x10A42F: ??? (in /usr/bin/lua)
+               n1: 768 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 768 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 768 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 768 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 768 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 768 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                     n1: 768 0x10990E: ??? (in /usr/bin/lua)
+                      n0: 768 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+       n1: 446 0x4E509E9: luaopen_debug (in /usr/lib64/liblua-5.3.so)
+        n1: 446 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 446 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 446 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 446 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+            n1: 446 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+             n1: 446 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+              n1: 446 0x10A42F: ??? (in /usr/bin/lua)
+               n1: 446 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 446 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 446 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 446 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 446 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 446 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                     n1: 446 0x10990E: ??? (in /usr/bin/lua)
+                      n0: 446 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+       n1: 446 0x4E63D19: luaopen_string (in /usr/lib64/liblua-5.3.so)
+        n1: 446 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 446 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 446 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 446 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+            n1: 446 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+             n1: 446 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+              n1: 446 0x10A42F: ??? (in /usr/bin/lua)
+               n1: 446 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 446 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 446 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 446 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 446 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 446 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                     n1: 446 0x10990E: ??? (in /usr/bin/lua)
+                      n0: 446 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+      n0: 315 in 9 places, all below massif's threshold (1.00%)
+     n1: 732 0x4E65C87: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 732 0x4E5F87D: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 732 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 732 0x4E5FCA0: lua_newstate (in /usr/lib64/liblua-5.3.so)
+         n1: 732 0x4E4BF02: luaL_newstate (in /usr/lib64/liblua-5.3.so)
+          n1: 732 0x1098C1: ??? (in /usr/bin/lua)
+           n0: 732 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+     n1: 640 0x4E57238: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 640 0x4E5F885: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 640 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 640 0x4E5FCA0: lua_newstate (in /usr/lib64/liblua-5.3.so)
+         n1: 640 0x4E4BF02: luaL_newstate (in /usr/lib64/liblua-5.3.so)
+          n1: 640 0x1098C1: ??? (in /usr/bin/lua)
+           n0: 640 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+     n1: 389 0x4E47CC1: ??? (in /usr/lib64/liblua-5.3.so)
+      n0: 389 in 3 places, all below massif's threshold (1.00%)
+     n0: 156 in 1 place, below massif's threshold (1.00%)
+    n2: 582 0x4E57856: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 475 0x4E584B7: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 475 0x4E58804: ??? (in /usr/lib64/liblua-5.3.so)
+       n0: 475 in 8 places, all below massif's threshold (1.00%)
+     n0: 107 in 3 places, all below massif's threshold (1.00%)
+    n0: 204 in 6 places, all below massif's threshold (1.00%)
+   n2: 1176 0x4E641D6: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 1008 0x4E48D24: lua_createtable (in /usr/lib64/liblua-5.3.so)
+     n0: 1008 in 17 places, all below massif's threshold (1.00%)
+    n0: 168 in 3 places, all below massif's threshold (1.00%)
+   n2: 720 0x4E53BD6: ??? (in /usr/lib64/liblua-5.3.so)
+    n2: 600 0x4E5DDFE: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 480 0x4E5D3D0: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 480 0x4E5DD96: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 480 0x4E5F6E0: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 480 0x4E51E66: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 480 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 480 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 480 0x4E52F95: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 480 0x4E49536: lua_load (in /usr/lib64/liblua-5.3.so)
+             n1: 480 0x4E4B0DF: luaL_loadfilex (in /usr/lib64/liblua-5.3.so)
+              n1: 480 0x10A7B2: ??? (in /usr/bin/lua)
+               n1: 480 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 480 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 480 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 480 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 480 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 480 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                     n1: 480 0x10990E: ??? (in /usr/bin/lua)
+                      n0: 480 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+     n0: 120 in 1 place, below massif's threshold (1.00%)
+    n0: 120 in 1 place, below massif's threshold (1.00%)
+   n0: 640 in 3 places, all below massif's threshold (1.00%)
+   n1: 468 0x4E60351: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 468 0x4E603EA: ??? (in /usr/lib64/liblua-5.3.so)
+     n0: 468 in 2 places, all below massif's threshold (1.00%)
+  n2: 2432 0x4E51FC6: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 2432 0x4E526F7: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 2432 0x4E68A14: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 2432 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2432 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 2432 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 2432 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2432 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 2432 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 2432 0x10A856: ??? (in /usr/bin/lua)
+            n1: 2432 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2432 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 2432 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 2432 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2432 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2432 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 2432 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 2432 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n2: 2376 0x4E5F905: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 2160 0x4E5298B: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 2160 0x4E68A14: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 2160 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2160 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 2160 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 2160 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2160 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 2160 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 2160 0x10A856: ??? (in /usr/bin/lua)
+            n1: 2160 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2160 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 2160 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 2160 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2160 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2160 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 2160 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 2160 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n0: 216 in 1 place, below massif's threshold (1.00%)
+  n2: 2048 0x4E600B2: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 2048 0x4E6023D: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 2048 0x4E6049F: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 2048 0x4E47D65: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x4E5712A: luaopen_io (in /usr/lib64/liblua-5.3.so)
+        n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+            n1: 2048 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+               n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                     n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+                      n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 584 in 9 places, all below massif's threshold (1.00%)
+  n1: 480 0x4E5D1AF: ??? (in /usr/lib64/liblua-5.3.so)
+   n0: 480 in 2 places, all below massif's threshold (1.00%)
+  n1: 468 0x4E5D166: ??? (in /usr/lib64/liblua-5.3.so)
+   n0: 468 in 2 places, all below massif's threshold (1.00%)
+  n1: 468 0x4E5D189: ??? (in /usr/lib64/liblua-5.3.so)
+   n0: 468 in 2 places, all below massif's threshold (1.00%)
+ n1: 1552 0x4E5FA65: lua_newstate (in /usr/lib64/liblua-5.3.so)
+  n1: 1552 0x4E4BF02: luaL_newstate (in /usr/lib64/liblua-5.3.so)
+   n1: 1552 0x1098C1: ??? (in /usr/bin/lua)
+    n0: 1552 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=116561059456
+mem_heap_B=193520
+mem_heap_extra_B=62320
+mem_stacks_B=0
+heap_tree=peak
+n2: 193520 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 190944 0x4E59654: ??? (in /usr/lib64/liblua-5.3.so)
+  n3: 102208 0x4E555D1: ??? (in /usr/lib64/liblua-5.3.so)
+   n3: 91864 0x4E539D3: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 49024 0x4E6A9E0: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 49024 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 49024 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 49024 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 49024 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 49024 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 49024 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 49024 0x10A856: ??? (in /usr/bin/lua)
+            n1: 49024 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 49024 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 49024 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 49024 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 49024 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 49024 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 49024 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 49024 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n1: 42800 0x4E6893B: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 42800 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 42800 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 42800 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 42800 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 42800 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 42800 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 42800 0x10A856: ??? (in /usr/bin/lua)
+            n1: 42800 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 42800 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 42800 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 42800 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 42800 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 42800 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 42800 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 42800 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n2: 7580 0x4E601E9: ??? (in /usr/lib64/liblua-5.3.so)
+    n2: 6851 0x4E6049F: ??? (in /usr/lib64/liblua-5.3.so)
+     n2: 4959 0x4E47D65: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 4644 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n0: 4644 in 13 places, all below massif's threshold (1.00%)
+      n0: 315 in 9 places, all below massif's threshold (1.00%)
+     n0: 1892 in 4 places, all below massif's threshold (1.00%)
+    n0: 729 in 7 places, all below massif's threshold (1.00%)
+   n0: 2764 in 5 places, all below massif's threshold (1.00%)
+  n1: 73344 0x4E53AD7: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 73344 0x4E689D1: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 73344 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 73344 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 73344 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 73344 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 73344 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+         n1: 73344 0x109B2A: ??? (in /usr/bin/lua)
+          n1: 73344 0x10A856: ??? (in /usr/bin/lua)
+           n1: 73344 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 73344 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 73344 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 73344 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 73344 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 73344 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                 n1: 73344 0x10990E: ??? (in /usr/bin/lua)
+                  n0: 73344 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+  n2: 9856 0x4E647C7: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 6016 0x4E48D77: lua_createtable (in /usr/lib64/liblua-5.3.so)
+    n0: 6016 in 14 places, all below massif's threshold (1.00%)
+   n2: 3840 0x4E64B75: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 3840 0x4E67AAC: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 3840 0x4E47D9E: ??? (in /usr/lib64/liblua-5.3.so)
+      n0: 3840 in 6 places, all below massif's threshold (1.00%)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 5536 in 15 places, all below massif's threshold (1.00%)
+ n0: 2576 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=118168679143
+mem_heap_B=138120
+mem_heap_extra_B=43928
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=121373706997
+mem_heap_B=101832
+mem_heap_extra_B=31816
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=123277680388
+mem_heap_B=183408
+mem_heap_extra_B=59008
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=126345162542
+mem_heap_B=87864
+mem_heap_extra_B=27176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=128778039366
+mem_heap_B=187728
+mem_heap_extra_B=60448
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=132374429229
+mem_heap_B=110616
+mem_heap_extra_B=34744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=136393922593
+mem_heap_B=167208
+mem_heap_extra_B=53624
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=139567203483
+mem_heap_B=187368
+mem_heap_extra_B=60328
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=141788511089
+mem_heap_B=167064
+mem_heap_extra_B=53560
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=144961792035
+mem_heap_B=187224
+mem_heap_extra_B=60296
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=148452422217
+mem_heap_B=105648
+mem_heap_extra_B=33088
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=152366138488
+mem_heap_B=157776
+mem_heap_extra_B=50464
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=154587431873
+mem_heap_B=137328
+mem_heap_extra_B=43648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=156914528571
+mem_heap_B=121416
+mem_heap_extra_B=38360
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=159558930039
+mem_heap_B=119040
+mem_heap_extra_B=37568
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=162309117097
+mem_heap_B=121272
+mem_heap_extra_B=38296
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=163895731529
+mem_heap_B=170952
+mem_heap_extra_B=54872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=166857495035
+mem_heap_B=89232
+mem_heap_extra_B=27632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=168444160374
+mem_heap_B=153024
+mem_heap_extra_B=48880
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=171723193369
+mem_heap_B=177576
+mem_heap_extra_B=57064
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=173521397509
+mem_heap_B=139200
+mem_heap_extra_B=44272
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=177117768850
+mem_heap_B=177360
+mem_heap_extra_B=57008
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=180819966373
+mem_heap_B=104856
+mem_heap_extra_B=32824
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=184627912847
+mem_heap_B=152520
+mem_heap_extra_B=48728
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=186637645259
+mem_heap_B=122856
+mem_heap_extra_B=38840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=188647411187
+mem_heap_B=93264
+mem_heap_extra_B=28976
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=190762955893
+mem_heap_B=184056
+mem_heap_extra_B=59240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=192878484528
+mem_heap_B=159216
+mem_heap_extra_B=50944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=195205539126
+mem_heap_B=143232
+mem_heap_extra_B=45632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=197638380491
+mem_heap_B=131712
+mem_heap_extra_B=41792
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=200177048369
+mem_heap_B=125016
+mem_heap_extra_B=39544
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=202821449837
+mem_heap_B=122640
+mem_heap_extra_B=38752
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=205783182075
+mem_heap_B=133944
+mem_heap_extra_B=42536
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=208744903992
+mem_heap_B=145176
+mem_heap_extra_B=46264
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=211812442776
+mem_heap_B=161016
+mem_heap_extra_B=51544
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=214985692710
+mem_heap_B=181032
+mem_heap_extra_B=58232
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=218158982695
+mem_heap_B=85632
+mem_heap_extra_B=26432
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=221332299113
+mem_heap_B=106224
+mem_heap_extra_B=33280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=224717147711
+mem_heap_B=135816
+mem_heap_extra_B=43160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=228313506945
+mem_heap_B=173976
+mem_heap_extra_B=55864
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=231909891985
+mem_heap_B=96648
+mem_heap_extra_B=30088
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=235506311763
+mem_heap_B=135456
+mem_heap_extra_B=43040
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=239314252357
+mem_heap_B=182760
+mem_heap_extra_B=58792
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=243227957987
+mem_heap_B=119184
+mem_heap_extra_B=37616
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=247141686421
+mem_heap_B=171240
+mem_heap_extra_B=54968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=249045662873
+mem_heap_B=137328
+mem_heap_extra_B=43648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=249047770217
+mem_heap_B=148920
+mem_heap_extra_B=47512
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=249049885403
+mem_heap_B=160512
+mem_heap_extra_B=51376
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=249051997939
+mem_heap_B=172104
+mem_heap_extra_B=55240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=249054114704
+mem_heap_B=183696
+mem_heap_extra_B=59104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=249056230859
+mem_heap_B=115224
+mem_heap_extra_B=36280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=249058346591
+mem_heap_B=91320
+mem_heap_extra_B=28328
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=249060465591
+mem_heap_B=103056
+mem_heap_extra_B=32240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=249062584591
+mem_heap_B=114792
+mem_heap_extra_B=36152
+mem_stacks_B=0
+heap_tree=detailed
+n3: 114792 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 112216 0x4E59654: ??? (in /usr/lib64/liblua-5.3.so)
+  n3: 58768 0x4E555D1: ??? (in /usr/lib64/liblua-5.3.so)
+   n3: 48424 0x4E539D3: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 29824 0x4E6A9E0: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 29824 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 29824 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 29824 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 29824 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 29824 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 29824 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 29824 0x10A856: ??? (in /usr/bin/lua)
+            n1: 29824 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 29824 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 29824 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 29824 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 29824 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 29824 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 29824 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 29824 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n1: 18560 0x4E6893B: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 18560 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 18560 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 18560 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 18560 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 18560 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 18560 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 18560 0x10A856: ??? (in /usr/bin/lua)
+            n1: 18560 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 18560 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 18560 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 18560 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 18560 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 18560 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 18560 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 18560 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n2: 7580 0x4E601E9: ??? (in /usr/lib64/liblua-5.3.so)
+    n2: 6851 0x4E6049F: ??? (in /usr/lib64/liblua-5.3.so)
+     n2: 4959 0x4E47D65: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 4644 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n0: 4644 in 13 places, all below massif's threshold (1.00%)
+      n0: 315 in 9 places, all below massif's threshold (1.00%)
+     n0: 1892 in 4 places, all below massif's threshold (1.00%)
+    n0: 729 in 7 places, all below massif's threshold (1.00%)
+   n0: 2764 in 5 places, all below massif's threshold (1.00%)
+  n1: 38560 0x4E53AD7: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 38560 0x4E689D1: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 38560 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 38560 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 38560 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 38560 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 38560 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+         n1: 38560 0x109B2A: ??? (in /usr/bin/lua)
+          n1: 38560 0x10A856: ??? (in /usr/bin/lua)
+           n1: 38560 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 38560 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 38560 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 38560 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 38560 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 38560 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                 n1: 38560 0x10990E: ??? (in /usr/bin/lua)
+                  n0: 38560 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+  n2: 9856 0x4E647C7: ??? (in /usr/lib64/liblua-5.3.so)
+   n2: 6016 0x4E48D77: lua_createtable (in /usr/lib64/liblua-5.3.so)
+    n0: 3968 in 13 places, all below massif's threshold (1.00%)
+    n1: 2048 0x4E59548: luaopen_math (in /usr/lib64/liblua-5.3.so)
+     n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 2048 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+            n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n2: 3840 0x4E64B75: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 3840 0x4E67AAC: ??? (in /usr/lib64/liblua-5.3.so)
+     n2: 3840 0x4E47D9E: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+        n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+               n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+      n0: 1792 in 5 places, all below massif's threshold (1.00%)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 2984 in 14 places, all below massif's threshold (1.00%)
+  n2: 2048 0x4E600B2: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 2048 0x4E6023D: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 2048 0x4E6049F: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 2048 0x4E47D65: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x4E5712A: luaopen_io (in /usr/lib64/liblua-5.3.so)
+        n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+            n1: 2048 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+               n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                     n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+                      n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1552 0x4E5FA65: lua_newstate (in /usr/lib64/liblua-5.3.so)
+  n1: 1552 0x4E4BF02: luaL_newstate (in /usr/lib64/liblua-5.3.so)
+   n1: 1552 0x1098C1: ??? (in /usr/bin/lua)
+    n0: 1552 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=249064703591
+mem_heap_B=126528
+mem_heap_extra_B=40064
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=249066822591
+mem_heap_B=138264
+mem_heap_extra_B=43976
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=249068930130
+mem_heap_B=149856
+mem_heap_extra_B=47840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=249071045316
+mem_heap_B=161448
+mem_heap_extra_B=51704
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=249073157852
+mem_heap_B=173040
+mem_heap_extra_B=55568
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=249075274617
+mem_heap_B=184632
+mem_heap_extra_B=59432
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=249077390408
+mem_heap_B=116160
+mem_heap_extra_B=36592
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=249079506309
+mem_heap_B=92256
+mem_heap_extra_B=28624
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=249081625309
+mem_heap_B=103992
+mem_heap_extra_B=32536
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=249083744309
+mem_heap_B=115728
+mem_heap_extra_B=36448
+mem_stacks_B=0
+heap_tree=detailed
+n3: 115728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 113152 0x4E59654: ??? (in /usr/lib64/liblua-5.3.so)
+  n3: 59288 0x4E555D1: ??? (in /usr/lib64/liblua-5.3.so)
+   n3: 48944 0x4E539D3: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 29824 0x4E6A9E0: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 29824 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 29824 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 29824 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 29824 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 29824 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 29824 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 29824 0x10A856: ??? (in /usr/bin/lua)
+            n1: 29824 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 29824 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 29824 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 29824 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 29824 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 29824 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 29824 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 29824 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n1: 19080 0x4E6893B: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 19080 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 19080 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 19080 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 19080 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 19080 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 19080 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 19080 0x10A856: ??? (in /usr/bin/lua)
+            n1: 19080 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 19080 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 19080 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 19080 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 19080 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 19080 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 19080 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 19080 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n2: 7580 0x4E601E9: ??? (in /usr/lib64/liblua-5.3.so)
+    n2: 6851 0x4E6049F: ??? (in /usr/lib64/liblua-5.3.so)
+     n2: 4959 0x4E47D65: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 4644 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n0: 4644 in 13 places, all below massif's threshold (1.00%)
+      n0: 315 in 9 places, all below massif's threshold (1.00%)
+     n0: 1892 in 4 places, all below massif's threshold (1.00%)
+    n0: 729 in 7 places, all below massif's threshold (1.00%)
+   n0: 2764 in 5 places, all below massif's threshold (1.00%)
+  n1: 38976 0x4E53AD7: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 38976 0x4E689D1: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 38976 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 38976 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 38976 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 38976 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 38976 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+         n1: 38976 0x109B2A: ??? (in /usr/bin/lua)
+          n1: 38976 0x10A856: ??? (in /usr/bin/lua)
+           n1: 38976 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 38976 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 38976 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 38976 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 38976 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 38976 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                 n1: 38976 0x10990E: ??? (in /usr/bin/lua)
+                  n0: 38976 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+  n2: 9856 0x4E647C7: ??? (in /usr/lib64/liblua-5.3.so)
+   n2: 6016 0x4E48D77: lua_createtable (in /usr/lib64/liblua-5.3.so)
+    n0: 3968 in 13 places, all below massif's threshold (1.00%)
+    n1: 2048 0x4E59548: luaopen_math (in /usr/lib64/liblua-5.3.so)
+     n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 2048 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+            n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n2: 3840 0x4E64B75: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 3840 0x4E67AAC: ??? (in /usr/lib64/liblua-5.3.so)
+     n2: 3840 0x4E47D9E: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+        n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+               n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+      n0: 1792 in 5 places, all below massif's threshold (1.00%)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 2984 in 14 places, all below massif's threshold (1.00%)
+  n2: 2048 0x4E600B2: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 2048 0x4E6023D: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 2048 0x4E6049F: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 2048 0x4E47D65: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x4E5712A: luaopen_io (in /usr/lib64/liblua-5.3.so)
+        n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+            n1: 2048 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+               n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                     n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+                      n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1552 0x4E5FA65: lua_newstate (in /usr/lib64/liblua-5.3.so)
+  n1: 1552 0x4E4BF02: luaL_newstate (in /usr/lib64/liblua-5.3.so)
+   n1: 1552 0x1098C1: ??? (in /usr/bin/lua)
+    n0: 1552 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=68
+#-----------
+time=249085863309
+mem_heap_B=127464
+mem_heap_extra_B=40360
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=249087982309
+mem_heap_B=139200
+mem_heap_extra_B=44272
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=249090090043
+mem_heap_B=150792
+mem_heap_extra_B=48136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=249092205229
+mem_heap_B=162384
+mem_heap_extra_B=52000
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=249094317765
+mem_heap_B=173976
+mem_heap_extra_B=55864
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=249096445332
+mem_heap_B=185568
+mem_heap_extra_B=59728
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=249098562944
+mem_heap_B=117168
+mem_heap_extra_B=36944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=249100679027
+mem_heap_B=93264
+mem_heap_extra_B=28976
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=249102798027
+mem_heap_B=105000
+mem_heap_extra_B=32888
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=249104917027
+mem_heap_B=116736
+mem_heap_extra_B=36800
+mem_stacks_B=0
+heap_tree=detailed
+n3: 116736 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 114160 0x4E59654: ??? (in /usr/lib64/liblua-5.3.so)
+  n3: 59848 0x4E555D1: ??? (in /usr/lib64/liblua-5.3.so)
+   n3: 49504 0x4E539D3: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 29824 0x4E6A9E0: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 29824 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 29824 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 29824 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 29824 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 29824 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 29824 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 29824 0x10A856: ??? (in /usr/bin/lua)
+            n1: 29824 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 29824 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 29824 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 29824 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 29824 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 29824 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 29824 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 29824 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n1: 19640 0x4E6893B: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 19640 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 19640 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 19640 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 19640 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 19640 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 19640 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 19640 0x10A856: ??? (in /usr/bin/lua)
+            n1: 19640 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 19640 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 19640 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 19640 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 19640 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 19640 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 19640 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 19640 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n2: 7580 0x4E601E9: ??? (in /usr/lib64/liblua-5.3.so)
+    n2: 6851 0x4E6049F: ??? (in /usr/lib64/liblua-5.3.so)
+     n2: 4959 0x4E47D65: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 4644 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n0: 4644 in 13 places, all below massif's threshold (1.00%)
+      n0: 315 in 9 places, all below massif's threshold (1.00%)
+     n0: 1892 in 4 places, all below massif's threshold (1.00%)
+    n0: 729 in 7 places, all below massif's threshold (1.00%)
+   n0: 2764 in 5 places, all below massif's threshold (1.00%)
+  n1: 39424 0x4E53AD7: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 39424 0x4E689D1: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 39424 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 39424 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 39424 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 39424 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 39424 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+         n1: 39424 0x109B2A: ??? (in /usr/bin/lua)
+          n1: 39424 0x10A856: ??? (in /usr/bin/lua)
+           n1: 39424 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 39424 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 39424 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 39424 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 39424 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 39424 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                 n1: 39424 0x10990E: ??? (in /usr/bin/lua)
+                  n0: 39424 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+  n2: 9856 0x4E647C7: ??? (in /usr/lib64/liblua-5.3.so)
+   n2: 6016 0x4E48D77: lua_createtable (in /usr/lib64/liblua-5.3.so)
+    n0: 3968 in 13 places, all below massif's threshold (1.00%)
+    n1: 2048 0x4E59548: luaopen_math (in /usr/lib64/liblua-5.3.so)
+     n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 2048 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+            n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n2: 3840 0x4E64B75: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 3840 0x4E67AAC: ??? (in /usr/lib64/liblua-5.3.so)
+     n2: 3840 0x4E47D9E: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+        n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+               n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+      n0: 1792 in 5 places, all below massif's threshold (1.00%)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 2984 in 14 places, all below massif's threshold (1.00%)
+  n2: 2048 0x4E600B2: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 2048 0x4E6023D: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 2048 0x4E6049F: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 2048 0x4E47D65: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x4E5712A: luaopen_io (in /usr/lib64/liblua-5.3.so)
+        n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+            n1: 2048 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+               n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                     n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+                      n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1552 0x4E5FA65: lua_newstate (in /usr/lib64/liblua-5.3.so)
+  n1: 1552 0x4E4BF02: luaL_newstate (in /usr/lib64/liblua-5.3.so)
+   n1: 1552 0x1098C1: ??? (in /usr/bin/lua)
+    n0: 1552 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=78
+#-----------
+time=249107036027
+mem_heap_B=128472
+mem_heap_extra_B=40712
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=249109155027
+mem_heap_B=140208
+mem_heap_extra_B=44624
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=249111268393
+mem_heap_B=151800
+mem_heap_extra_B=48488
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=249113378157
+mem_heap_B=163392
+mem_heap_extra_B=52352
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=249115496879
+mem_heap_B=174984
+mem_heap_extra_B=56216
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=249117604881
+mem_heap_B=186504
+mem_heap_extra_B=60056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=249119716280
+mem_heap_B=87000
+mem_heap_extra_B=26872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=249121825745
+mem_heap_B=94128
+mem_heap_extra_B=29248
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=249123944745
+mem_heap_B=105864
+mem_heap_extra_B=33160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=249126063745
+mem_heap_B=117600
+mem_heap_extra_B=37072
+mem_stacks_B=0
+heap_tree=detailed
+n3: 117600 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 115024 0x4E59654: ??? (in /usr/lib64/liblua-5.3.so)
+  n3: 60328 0x4E555D1: ??? (in /usr/lib64/liblua-5.3.so)
+   n3: 49984 0x4E539D3: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 29824 0x4E6A9E0: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 29824 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 29824 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 29824 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 29824 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 29824 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 29824 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 29824 0x10A856: ??? (in /usr/bin/lua)
+            n1: 29824 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 29824 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 29824 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 29824 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 29824 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 29824 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 29824 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 29824 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n1: 20120 0x4E6893B: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 20120 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 20120 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 20120 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 20120 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 20120 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+          n1: 20120 0x109B2A: ??? (in /usr/bin/lua)
+           n1: 20120 0x10A856: ??? (in /usr/bin/lua)
+            n1: 20120 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 20120 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 20120 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 20120 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 20120 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 20120 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 20120 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 20120 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n2: 7580 0x4E601E9: ??? (in /usr/lib64/liblua-5.3.so)
+    n2: 6851 0x4E6049F: ??? (in /usr/lib64/liblua-5.3.so)
+     n2: 4959 0x4E47D65: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 4644 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n0: 4644 in 13 places, all below massif's threshold (1.00%)
+      n0: 315 in 9 places, all below massif's threshold (1.00%)
+     n0: 1892 in 4 places, all below massif's threshold (1.00%)
+    n0: 729 in 7 places, all below massif's threshold (1.00%)
+   n0: 2764 in 5 places, all below massif's threshold (1.00%)
+  n1: 39808 0x4E53AD7: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 39808 0x4E689D1: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 39808 0x4E52B17: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 39808 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 39808 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 39808 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 39808 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+         n1: 39808 0x109B2A: ??? (in /usr/bin/lua)
+          n1: 39808 0x10A856: ??? (in /usr/bin/lua)
+           n1: 39808 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 39808 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 39808 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 39808 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 39808 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 39808 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                 n1: 39808 0x10990E: ??? (in /usr/bin/lua)
+                  n0: 39808 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+  n2: 9856 0x4E647C7: ??? (in /usr/lib64/liblua-5.3.so)
+   n2: 6016 0x4E48D77: lua_createtable (in /usr/lib64/liblua-5.3.so)
+    n0: 3968 in 13 places, all below massif's threshold (1.00%)
+    n1: 2048 0x4E59548: luaopen_math (in /usr/lib64/liblua-5.3.so)
+     n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+        n1: 2048 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+            n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+               n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                  n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+                   n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n2: 3840 0x4E64B75: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 3840 0x4E67AAC: ??? (in /usr/lib64/liblua-5.3.so)
+     n2: 3840 0x4E47D9E: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+        n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+            n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+               n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+      n0: 1792 in 5 places, all below massif's threshold (1.00%)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 2984 in 14 places, all below massif's threshold (1.00%)
+  n2: 2048 0x4E600B2: ??? (in /usr/lib64/liblua-5.3.so)
+   n1: 2048 0x4E6023D: ??? (in /usr/lib64/liblua-5.3.so)
+    n1: 2048 0x4E6049F: ??? (in /usr/lib64/liblua-5.3.so)
+     n1: 2048 0x4E47D65: ??? (in /usr/lib64/liblua-5.3.so)
+      n1: 2048 0x4E4BC42: luaL_setfuncs (in /usr/lib64/liblua-5.3.so)
+       n1: 2048 0x4E5712A: luaopen_io (in /usr/lib64/liblua-5.3.so)
+        n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+         n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+          n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+           n1: 2048 0x4E4935F: lua_callk (in /usr/lib64/liblua-5.3.so)
+            n1: 2048 0x4E4BD9B: luaL_requiref (in /usr/lib64/liblua-5.3.so)
+             n1: 2048 0x4E55AA3: luaL_openlibs (in /usr/lib64/liblua-5.3.so)
+              n1: 2048 0x10A42F: ??? (in /usr/bin/lua)
+               n1: 2048 0x4E528B6: ??? (in /usr/lib64/liblua-5.3.so)
+                n1: 2048 0x4E52AE6: ??? (in /usr/lib64/liblua-5.3.so)
+                 n1: 2048 0x4E52B44: ??? (in /usr/lib64/liblua-5.3.so)
+                  n1: 2048 0x4E51F39: ??? (in /usr/lib64/liblua-5.3.so)
+                   n1: 2048 0x4E52E8E: ??? (in /usr/lib64/liblua-5.3.so)
+                    n1: 2048 0x4E49427: lua_pcallk (in /usr/lib64/liblua-5.3.so)
+                     n1: 2048 0x10990E: ??? (in /usr/bin/lua)
+                      n0: 2048 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1552 0x4E5FA65: lua_newstate (in /usr/lib64/liblua-5.3.so)
+  n1: 1552 0x4E4BF02: luaL_newstate (in /usr/lib64/liblua-5.3.so)
+   n1: 1552 0x1098C1: ??? (in /usr/bin/lua)
+    n0: 1552 0x5CE1D84: (below main) (in /usr/lib64/libc-2.28.so)
+ n0: 1024 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=88
+#-----------
+time=249128182745
+mem_heap_B=129336
+mem_heap_extra_B=40984
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=249130301745
+mem_heap_B=141072
+mem_heap_extra_B=44896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=366806664184
+mem_heap_B=149222
+mem_heap_extra_B=46770
+mem_stacks_B=0
+heap_tree=empty
