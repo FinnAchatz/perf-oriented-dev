@@ -1,0 +1,2075 @@
+desc: (none)
+cmd: ../lua-5.4.6/src/lua ../lua/fib_tail.lua
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1409303
+mem_heap_B=26503
+mem_heap_extra_B=5737
+mem_stacks_B=0
+heap_tree=peak
+n4: 26503 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 22330 0x41048C: luaM_malloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n7: 13858 0x40F768: luaC_newobj (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 6870 0x4161F4: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n5: 6452 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n2: 4470 0x406931: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n5: 4219 0x420044: luaL_setfuncs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 1524 in 9 places, all below massif's threshold (1.00%)
+       n1: 1002 0x42A57A: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1002 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1002 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1002 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1002 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 1002 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 1002 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 1002 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 1002 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 762 0x426283: luaopen_base (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 762 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 762 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 762 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 762 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 762 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 762 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 762 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 762 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 485 0x427BF5: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 485 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 485 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 485 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 485 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 485 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 485 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 485 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 485 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 446 0x42FF25: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 446 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 446 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 446 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 446 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 446 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 446 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 446 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 446 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 251 in 8 places, all below massif's threshold (1.00%)
+     n1: 764 0x417AC0: luaT_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 764 0x415626: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 764 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 764 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 764 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 764 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 640 0x423864: luaX_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 640 0x41562E: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 640 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 640 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 640 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 640 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 422 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 422 in 3 places, all below massif's threshold (1.00%)
+     n0: 156 in 1 place, below massif's threshold (1.00%)
+    n0: 418 in 5 places, all below massif's threshold (1.00%)
+   n2: 2352 0x40D1A6: luaF_newLclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2312 0x41AEB2: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 2312 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 2312 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 2312 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 2312 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 2312 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 2312 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 2312 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 2312 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 2312 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 2312 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 2312 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 2312 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 2280 0x40D2A6: luaF_findupval (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2280 0x41AF61: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 2280 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 2280 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 2280 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 2280 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 2280 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 2280 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 2280 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 2280 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 2280 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 2280 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 2280 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 2280 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 1120 0x416AC2: luaH_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1008 0x408470: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 1008 in 16 places, all below massif's threshold (1.00%)
+    n0: 112 in 3 places, all below massif's threshold (1.00%)
+   n0: 516 in 3 places, all below massif's threshold (1.00%)
+   n1: 384 0x40D5D2: luaF_newproto (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 384 in 2 places, all below massif's threshold (1.00%)
+   n1: 336 0x40D185: luaF_newCclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 336 0x407F98: lua_pushcclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 336 in 2 places, all below massif's threshold (1.00%)
+  n2: 7560 0x41768C: luaH_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n7: 5256 0x4084BF: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1536 0x42A569: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 1032 in 8 places, all below massif's threshold (1.00%)
+    n1: 768 0x427BE4: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 768 0x42FF14: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x429442: luaopen_io (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42C1B4: luaopen_os (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42FF34: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 2304 0x4172C1: luaH_newkey (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2304 0x419B11: luaV_finishset (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n3: 2304 0x406967: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 384 in 3 places, all below massif's threshold (1.00%)
+      n1: 384 0x4207E8: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n1: 720 0x415532: stack_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 720 0x4155D2: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 720 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 720 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 720 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 720 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n0: 192 in 2 places, all below massif's threshold (1.00%)
+ n3: 2549 0x4102CF: luaM_realloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 2048 0x416093: luaS_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 2048 0x416279: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2048 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 2048 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 2048 0x420746: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 2048 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 2048 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 2048 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 2048 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 2048 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 2048 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 2048 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 2048 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 405 0x41033B: luaM_shrinkvector_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 405 in 6 places, all below massif's threshold (1.00%)
+  n0: 96 in 3 places, all below massif's threshold (1.00%)
+ n1: 1624 0x415741: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 1624 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 1624 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=2381542946
+mem_heap_B=25903
+mem_heap_extra_B=5481
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=4094353038
+mem_heap_B=25743
+mem_heap_extra_B=5417
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=6116863847
+mem_heap_B=23183
+mem_heap_extra_B=4409
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=7465207422
+mem_heap_B=23023
+mem_heap_extra_B=4329
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=9368752364
+mem_heap_B=23343
+mem_heap_extra_B=4457
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=11827651473
+mem_heap_B=25423
+mem_heap_extra_B=5305
+mem_stacks_B=0
+heap_tree=detailed
+n4: 25423 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 21250 0x41048C: luaM_malloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n7: 12778 0x40F768: luaC_newobj (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 6870 0x4161F4: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n5: 6452 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n2: 4470 0x406931: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n6: 4219 0x420044: luaL_setfuncs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 1214 in 8 places, all below massif's threshold (1.00%)
+       n1: 1002 0x42A57A: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1002 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1002 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1002 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1002 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 1002 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 1002 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 1002 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 1002 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 762 0x426283: luaopen_base (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 762 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 762 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 762 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 762 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 762 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 762 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 762 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 762 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 485 0x427BF5: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 485 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 485 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 485 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 485 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 485 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 485 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 485 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 485 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 446 0x42FF25: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 446 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 446 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 446 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 446 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 446 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 446 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 446 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 446 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 310 0x42C1C5: luaopen_os (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 310 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 310 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 310 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 310 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 310 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 310 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 310 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 310 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 310 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 310 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 310 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 310 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 251 in 8 places, all below massif's threshold (1.00%)
+     n1: 764 0x417AC0: luaT_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 764 0x415626: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 764 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 764 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 764 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 764 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 640 0x423864: luaX_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 640 0x41562E: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 640 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 640 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 640 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 640 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 422 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 422 in 3 places, all below massif's threshold (1.00%)
+     n0: 156 in 1 place, below massif's threshold (1.00%)
+    n0: 418 in 5 places, all below massif's threshold (1.00%)
+   n2: 1832 0x40D1A6: luaF_newLclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1792 0x41AEB2: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1792 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1792 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1792 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1792 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1792 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1792 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1792 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1792 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1792 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1792 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1792 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1792 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 1720 0x40D2A6: luaF_findupval (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1720 0x41AF61: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1720 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1720 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1720 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1720 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1720 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1720 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1720 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1720 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1720 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1720 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1720 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1720 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 1120 0x416AC2: luaH_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1008 0x408470: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 1008 in 16 places, all below massif's threshold (1.00%)
+    n0: 112 in 3 places, all below massif's threshold (1.00%)
+   n0: 516 in 3 places, all below massif's threshold (1.00%)
+   n1: 384 0x40D5D2: luaF_newproto (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 384 in 2 places, all below massif's threshold (1.00%)
+   n1: 336 0x40D185: luaF_newCclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 336 0x407F98: lua_pushcclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 336 in 2 places, all below massif's threshold (1.00%)
+  n2: 7560 0x41768C: luaH_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n7: 5256 0x4084BF: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1536 0x42A569: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 1032 in 8 places, all below massif's threshold (1.00%)
+    n1: 768 0x427BE4: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 768 0x42FF14: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x429442: luaopen_io (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42C1B4: luaopen_os (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42FF34: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 2304 0x4172C1: luaH_newkey (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2304 0x419B11: luaV_finishset (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n3: 2304 0x406967: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 384 in 3 places, all below massif's threshold (1.00%)
+      n1: 384 0x4207E8: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n1: 720 0x415532: stack_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 720 0x4155D2: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 720 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 720 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 720 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 720 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n0: 192 in 2 places, all below massif's threshold (1.00%)
+ n3: 2549 0x4102CF: luaM_realloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 2048 0x416093: luaS_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 2048 0x416279: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2048 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 2048 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 2048 0x420746: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 2048 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 2048 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 2048 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 2048 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 2048 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 2048 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 2048 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 2048 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 405 0x41033B: luaM_shrinkvector_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 405 in 6 places, all below massif's threshold (1.00%)
+  n0: 96 in 3 places, all below massif's threshold (1.00%)
+ n1: 1624 0x415741: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 1624 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 1624 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=13652010430
+mem_heap_B=24143
+mem_heap_extra_B=4777
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=15555689072
+mem_heap_B=25583
+mem_heap_extra_B=5353
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=16983448275
+mem_heap_B=24383
+mem_heap_extra_B=4889
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=18569847291
+mem_heap_B=24063
+mem_heap_extra_B=4761
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=19680326425
+mem_heap_B=25663
+mem_heap_extra_B=5401
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=21108085628
+mem_heap_B=24463
+mem_heap_extra_B=4905
+mem_stacks_B=0
+heap_tree=detailed
+n4: 24463 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 20290 0x41048C: luaM_malloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n7: 11818 0x40F768: luaC_newobj (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 6870 0x4161F4: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n5: 6452 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n2: 4470 0x406931: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n6: 4219 0x420044: luaL_setfuncs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 1214 in 8 places, all below massif's threshold (1.00%)
+       n1: 1002 0x42A57A: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1002 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1002 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1002 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1002 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 1002 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 1002 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 1002 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 1002 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 762 0x426283: luaopen_base (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 762 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 762 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 762 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 762 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 762 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 762 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 762 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 762 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 485 0x427BF5: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 485 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 485 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 485 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 485 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 485 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 485 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 485 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 485 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 446 0x42FF25: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 446 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 446 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 446 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 446 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 446 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 446 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 446 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 446 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 310 0x42C1C5: luaopen_os (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 310 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 310 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 310 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 310 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 310 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 310 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 310 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 310 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 310 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 310 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 310 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 310 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 251 in 8 places, all below massif's threshold (1.00%)
+     n1: 764 0x417AC0: luaT_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 764 0x415626: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 764 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 764 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 764 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 764 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 640 0x423864: luaX_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 640 0x41562E: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 640 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 640 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 640 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 640 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n2: 422 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 296 0x420746: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 296 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 296 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 296 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 296 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 296 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 296 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 296 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 296 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 126 in 2 places, all below massif's threshold (1.00%)
+     n0: 156 in 1 place, below massif's threshold (1.00%)
+    n0: 418 in 5 places, all below massif's threshold (1.00%)
+   n2: 1352 0x40D1A6: luaF_newLclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1312 0x41AEB2: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1312 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1312 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1312 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1312 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1312 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1312 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1312 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1312 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1312 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1312 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1312 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1312 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 1240 0x40D2A6: luaF_findupval (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1240 0x41AF61: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1240 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1240 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1240 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1240 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1240 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1240 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1240 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1240 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1240 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1240 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1240 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1240 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 1120 0x416AC2: luaH_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1008 0x408470: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 1008 in 16 places, all below massif's threshold (1.00%)
+    n0: 112 in 3 places, all below massif's threshold (1.00%)
+   n0: 516 in 3 places, all below massif's threshold (1.00%)
+   n1: 384 0x40D5D2: luaF_newproto (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 384 in 2 places, all below massif's threshold (1.00%)
+   n1: 336 0x40D185: luaF_newCclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 336 0x407F98: lua_pushcclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 336 in 2 places, all below massif's threshold (1.00%)
+  n2: 7560 0x41768C: luaH_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n7: 5256 0x4084BF: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1536 0x42A569: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 1032 in 8 places, all below massif's threshold (1.00%)
+    n1: 768 0x427BE4: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 768 0x42FF14: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x429442: luaopen_io (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42C1B4: luaopen_os (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42FF34: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 2304 0x4172C1: luaH_newkey (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2304 0x419B11: luaV_finishset (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n3: 2304 0x406967: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 384 in 3 places, all below massif's threshold (1.00%)
+      n1: 384 0x4207E8: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n1: 720 0x415532: stack_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 720 0x4155D2: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 720 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 720 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 720 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 720 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n0: 192 in 2 places, all below massif's threshold (1.00%)
+ n3: 2549 0x4102CF: luaM_realloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 2048 0x416093: luaS_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 2048 0x416279: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2048 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 2048 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 2048 0x420746: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 2048 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 2048 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 2048 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 2048 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 2048 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 2048 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 2048 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 2048 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 405 0x41033B: luaM_shrinkvector_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 405 in 6 places, all below massif's threshold (1.00%)
+  n0: 96 in 3 places, all below massif's threshold (1.00%)
+ n1: 1624 0x415741: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 1624 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 1624 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=23048351794
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=25000889906
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=26953428018
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=28905966130
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=30858504242
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=32811042354
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=33787311410
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=35373748626
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=36960185842
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=38546623058
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=40133060274
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=41719497490
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=43305934706
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=44892371922
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=46478809138
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=48065246354
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=49651683570
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=51238120786
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=53617776610
+mem_heap_B=22063
+mem_heap_extra_B=3945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=55339379790
+mem_heap_B=22543
+mem_heap_extra_B=4137
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=57060982970
+mem_heap_B=23023
+mem_heap_extra_B=4329
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=59356453729
+mem_heap_B=25183
+mem_heap_extra_B=5209
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=61078056909
+mem_heap_B=25663
+mem_heap_extra_B=5401
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=62799660089
+mem_heap_B=26143
+mem_heap_extra_B=5593
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=63947395690
+mem_heap_B=24943
+mem_heap_extra_B=5097
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=65668998870
+mem_heap_B=25423
+mem_heap_extra_B=5289
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=67390602050
+mem_heap_B=25903
+mem_heap_extra_B=5481
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=69112205230
+mem_heap_B=26383
+mem_heap_extra_B=5673
+mem_stacks_B=0
+heap_tree=detailed
+n4: 26383 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 22210 0x41048C: luaM_malloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n7: 13738 0x40F768: luaC_newobj (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 6870 0x4161F4: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n5: 6452 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n2: 4470 0x406931: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n5: 4219 0x420044: luaL_setfuncs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 1524 in 9 places, all below massif's threshold (1.00%)
+       n1: 1002 0x42A57A: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1002 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1002 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1002 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1002 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 1002 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 1002 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 1002 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 1002 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 762 0x426283: luaopen_base (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 762 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 762 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 762 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 762 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 762 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 762 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 762 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 762 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 485 0x427BF5: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 485 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 485 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 485 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 485 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 485 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 485 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 485 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 485 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 446 0x42FF25: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 446 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 446 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 446 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 446 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 446 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 446 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 446 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 446 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 251 in 8 places, all below massif's threshold (1.00%)
+     n1: 764 0x417AC0: luaT_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 764 0x415626: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 764 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 764 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 764 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 764 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 640 0x423864: luaX_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 640 0x41562E: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 640 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 640 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 640 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 640 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 422 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 422 in 3 places, all below massif's threshold (1.00%)
+     n0: 156 in 1 place, below massif's threshold (1.00%)
+    n0: 418 in 5 places, all below massif's threshold (1.00%)
+   n2: 2312 0x40D1A6: luaF_newLclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2272 0x41AEB2: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 2272 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 2272 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 2272 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 2272 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 2272 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 2272 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 2272 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 2272 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 2272 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 2272 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 2272 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 2272 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 2200 0x40D2A6: luaF_findupval (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2200 0x41AF61: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 2200 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 2200 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 2200 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 2200 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 2200 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 2200 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 2200 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 2200 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 2200 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 2200 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 2200 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 2200 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 1120 0x416AC2: luaH_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1008 0x408470: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 1008 in 16 places, all below massif's threshold (1.00%)
+    n0: 112 in 3 places, all below massif's threshold (1.00%)
+   n0: 516 in 3 places, all below massif's threshold (1.00%)
+   n1: 384 0x40D5D2: luaF_newproto (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 384 in 2 places, all below massif's threshold (1.00%)
+   n1: 336 0x40D185: luaF_newCclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 336 0x407F98: lua_pushcclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 336 in 2 places, all below massif's threshold (1.00%)
+  n2: 7560 0x41768C: luaH_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n7: 5256 0x4084BF: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1536 0x42A569: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 1032 in 8 places, all below massif's threshold (1.00%)
+    n1: 768 0x427BE4: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 768 0x42FF14: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x429442: luaopen_io (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42C1B4: luaopen_os (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42FF34: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 2304 0x4172C1: luaH_newkey (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2304 0x419B11: luaV_finishset (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n3: 2304 0x406967: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 384 in 3 places, all below massif's threshold (1.00%)
+      n1: 384 0x4207E8: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n1: 720 0x415532: stack_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 720 0x4155D2: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 720 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 720 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 720 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 720 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n0: 192 in 2 places, all below massif's threshold (1.00%)
+ n3: 2549 0x4102CF: luaM_realloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 2048 0x416093: luaS_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 2048 0x416279: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2048 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 2048 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 2048 0x420746: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 2048 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 2048 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 2048 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 2048 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 2048 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 2048 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 2048 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 2048 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 405 0x41033B: luaM_shrinkvector_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 405 in 6 places, all below massif's threshold (1.00%)
+  n0: 96 in 3 places, all below massif's threshold (1.00%)
+ n1: 1624 0x415741: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 1624 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 1624 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=70259940831
+mem_heap_B=25183
+mem_heap_extra_B=5209
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=71981544011
+mem_heap_B=25663
+mem_heap_extra_B=5401
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=73703147191
+mem_heap_B=26143
+mem_heap_extra_B=5593
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=74850882792
+mem_heap_B=24943
+mem_heap_extra_B=5097
+mem_stacks_B=0
+heap_tree=detailed
+n4: 24943 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 20770 0x41048C: luaM_malloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n7: 12298 0x40F768: luaC_newobj (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 6870 0x4161F4: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n5: 6452 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n2: 4470 0x406931: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n6: 4219 0x420044: luaL_setfuncs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 1214 in 8 places, all below massif's threshold (1.00%)
+       n1: 1002 0x42A57A: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1002 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1002 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1002 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1002 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 1002 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 1002 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 1002 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 1002 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 762 0x426283: luaopen_base (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 762 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 762 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 762 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 762 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 762 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 762 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 762 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 762 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 485 0x427BF5: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 485 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 485 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 485 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 485 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 485 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 485 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 485 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 485 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 446 0x42FF25: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 446 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 446 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 446 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 446 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 446 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 446 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 446 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 446 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 310 0x42C1C5: luaopen_os (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 310 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 310 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 310 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 310 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 310 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 310 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 310 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 310 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 310 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 310 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 310 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 310 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 251 in 8 places, all below massif's threshold (1.00%)
+     n1: 764 0x417AC0: luaT_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 764 0x415626: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 764 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 764 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 764 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 764 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 640 0x423864: luaX_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 640 0x41562E: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 640 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 640 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 640 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 640 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 422 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 422 in 3 places, all below massif's threshold (1.00%)
+     n0: 156 in 1 place, below massif's threshold (1.00%)
+    n0: 418 in 5 places, all below massif's threshold (1.00%)
+   n2: 1592 0x40D1A6: luaF_newLclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1552 0x41AEB2: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1552 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1552 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1552 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1552 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1552 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1552 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1552 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1552 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1552 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1552 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1552 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1552 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 1480 0x40D2A6: luaF_findupval (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1480 0x41AF61: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1480 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1480 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1480 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1480 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1480 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1480 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1480 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1480 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1480 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1480 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1480 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1480 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 1120 0x416AC2: luaH_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1008 0x408470: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 1008 in 16 places, all below massif's threshold (1.00%)
+    n0: 112 in 3 places, all below massif's threshold (1.00%)
+   n0: 516 in 3 places, all below massif's threshold (1.00%)
+   n1: 384 0x40D5D2: luaF_newproto (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 384 in 2 places, all below massif's threshold (1.00%)
+   n1: 336 0x40D185: luaF_newCclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 336 0x407F98: lua_pushcclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 336 in 2 places, all below massif's threshold (1.00%)
+  n2: 7560 0x41768C: luaH_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n7: 5256 0x4084BF: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1536 0x42A569: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 1032 in 8 places, all below massif's threshold (1.00%)
+    n1: 768 0x427BE4: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 768 0x42FF14: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x429442: luaopen_io (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42C1B4: luaopen_os (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42FF34: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 2304 0x4172C1: luaH_newkey (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2304 0x419B11: luaV_finishset (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n3: 2304 0x406967: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 384 in 3 places, all below massif's threshold (1.00%)
+      n1: 384 0x4207E8: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n1: 720 0x415532: stack_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 720 0x4155D2: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 720 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 720 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 720 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 720 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n0: 192 in 2 places, all below massif's threshold (1.00%)
+ n3: 2549 0x4102CF: luaM_realloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 2048 0x416093: luaS_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 2048 0x416279: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2048 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 2048 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 2048 0x420746: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 2048 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 2048 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 2048 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 2048 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 2048 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 2048 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 2048 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 2048 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 405 0x41033B: luaM_shrinkvector_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 405 in 6 places, all below massif's threshold (1.00%)
+  n0: 96 in 3 places, all below massif's threshold (1.00%)
+ n1: 1624 0x415741: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 1624 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 1624 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=76572485972
+mem_heap_B=25423
+mem_heap_extra_B=5289
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=78294089152
+mem_heap_B=25903
+mem_heap_extra_B=5481
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=80015692332
+mem_heap_B=26383
+mem_heap_extra_B=5673
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=82311163534
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=83287432590
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=84263701646
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=85239970702
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=86216239758
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=87192508814
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=88168777870
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=89145046926
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=detailed
+n4: 23983 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 19810 0x41048C: luaM_malloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n7: 11338 0x40F768: luaC_newobj (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 6870 0x4161F4: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n5: 6452 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n2: 4470 0x406931: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n6: 4219 0x420044: luaL_setfuncs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 1214 in 8 places, all below massif's threshold (1.00%)
+       n1: 1002 0x42A57A: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1002 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1002 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1002 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1002 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1002 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1002 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 1002 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 1002 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 1002 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 1002 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 762 0x426283: luaopen_base (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 762 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 762 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 762 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 762 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 762 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 762 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 762 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 762 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 762 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 762 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 485 0x427BF5: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 485 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 485 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 485 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 485 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 485 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 485 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 485 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 485 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 485 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 485 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 446 0x42FF25: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 446 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 446 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 446 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 446 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 446 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 446 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 446 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 446 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 446 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 446 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 310 0x42C1C5: luaopen_os (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 310 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 310 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 310 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 310 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 310 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 310 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 310 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 310 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n1: 310 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                 n1: 310 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                  n1: 310 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                   n0: 310 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 251 in 8 places, all below massif's threshold (1.00%)
+     n1: 764 0x417AC0: luaT_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 764 0x415626: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 764 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 764 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 764 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 764 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 640 0x423864: luaX_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 640 0x41562E: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 640 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 640 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 640 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n0: 640 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n2: 422 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 296 0x420746: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 296 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 296 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 296 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 296 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 296 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 296 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 296 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 296 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 126 in 2 places, all below massif's threshold (1.00%)
+     n0: 156 in 1 place, below massif's threshold (1.00%)
+    n0: 418 in 5 places, all below massif's threshold (1.00%)
+   n2: 1120 0x416AC2: luaH_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1008 0x408470: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 1008 in 16 places, all below massif's threshold (1.00%)
+    n0: 112 in 3 places, all below massif's threshold (1.00%)
+   n2: 1112 0x40D1A6: luaF_newLclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1072 0x41AEB2: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1072 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1072 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1072 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1072 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1072 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1072 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1072 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1072 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1072 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1072 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1072 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1072 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 1000 0x40D2A6: luaF_findupval (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1000 0x41AF61: luaV_execute (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1000 0x40C408: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1000 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1000 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1000 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1000 0x405C08: docall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1000 0x40669C: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1000 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1000 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1000 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1000 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1000 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1000 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 516 in 3 places, all below massif's threshold (1.00%)
+   n1: 384 0x40D5D2: luaF_newproto (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 384 in 2 places, all below massif's threshold (1.00%)
+   n1: 336 0x40D185: luaF_newCclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 336 0x407F98: lua_pushcclosure (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n0: 336 in 2 places, all below massif's threshold (1.00%)
+  n2: 7560 0x41768C: luaH_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n7: 5256 0x4084BF: lua_createtable (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 1536 0x42A569: luaopen_math (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 1032 in 8 places, all below massif's threshold (1.00%)
+    n1: 768 0x427BE4: luaopen_debug (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 768 0x42FF14: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 768 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 768 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 768 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 768 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 768 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 768 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 768 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 768 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 768 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 768 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x429442: luaopen_io (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42C1B4: luaopen_os (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 384 0x42FF34: luaopen_string (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x408CD9: lua_callk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x4207CB: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+               n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+                n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n2: 2304 0x4172C1: luaH_newkey (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2304 0x419B11: luaV_finishset (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n3: 2304 0x406967: auxsetstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 1536 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 1536 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 1536 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 1536 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 1536 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 1536 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 1536 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n0: 1536 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n0: 384 in 3 places, all below massif's threshold (1.00%)
+      n1: 384 0x4207E8: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 384 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 384 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 384 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 384 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 384 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 384 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 384 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 384 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n1: 720 0x415532: stack_init (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 720 0x4155D2: f_luaopen (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 720 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 720 0x41594F: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 720 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n0: 720 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n0: 192 in 2 places, all below massif's threshold (1.00%)
+ n3: 2549 0x4102CF: luaM_realloc_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 2048 0x416093: luaS_resize (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n1: 2048 0x416279: internshrstr (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+    n1: 2048 0x416562: luaS_new (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+     n1: 2048 0x4081C9: lua_getfield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+      n1: 2048 0x420746: luaL_requiref (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+       n1: 2048 0x420A13: luaL_openlibs (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+        n1: 2048 0x406209: pmain (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+         n1: 2048 0x40C0E2: luaD_precall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+          n1: 2048 0x40C3EF: luaD_callnoyield (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+           n1: 2048 0x40B30A: luaD_rawrunprotected (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+            n1: 2048 0x40C7CF: luaD_pcall (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+             n1: 2048 0x408DB0: lua_pcallk (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+              n0: 2048 0x405696: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 405 0x41033B: luaM_shrinkvector_ (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 405 in 6 places, all below massif's threshold (1.00%)
+  n0: 96 in 3 places, all below massif's threshold (1.00%)
+ n1: 1624 0x415741: lua_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+  n1: 1624 0x42093E: luaL_newstate (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+   n0: 1624 0x40563D: main (in /home/eprader/perf-oriented-dev/perf-oriented-dev/exercises/12/lua-5.4.6/src/lua)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=90121315982
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=91097585038
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=92073854094
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=93050123150
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=94026392206
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=95002661262
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=95978930318
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=96955199374
+mem_heap_B=23983
+mem_heap_extra_B=4713
+mem_stacks_B=0
+heap_tree=empty
