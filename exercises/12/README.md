@@ -149,7 +149,7 @@ The result is sufficient to decide optimization decisions on, as it shows the ho
 Because the benchmarks were done separately for each Fibonacci variant we also know which functions are important for which variant.
 Since this is theoretically only simulated, optimizing branches is not possible but would not really be viable for an interpreter anyway.
 
-For massif, this is also a sufficient input as we can analyse the allocation behaviour in great detail.
+For `massif`, this is also a sufficient input as we can analyse the allocation behaviour in great detail.
 
 ### C) Code Understanding
 
@@ -201,7 +201,7 @@ We also tried a number of compiler options as well as removing some that were pr
 Finn?
 
 ### Evaluation
-Unfortunately non of the routs we chose for optimisation lead to any significant performance improvements.
+Unfortunately none of the routs we chose for optimisation lead to any significant performance improvements.
 Source code optimization proved to be rather difficult due to the complexity of the project and difficulty to understand the implications of code changes.
 
 ====================================== Finn
