@@ -50,8 +50,8 @@
 
 ### B) Profiling
 
-The tool of choice we used is cachegrind.
-We seperated each fibonacci variant into a seperate file and removed the measuring overhead, so we could get more specific results.
+The tools we used are `cachegrind`, `callgrind` and `massif`.
+We separated each Fibonacci variant into a separate file and removed the measuring overhead, so we could get more specific results.
 
 Cachegrind measures the amount of operations a program has to do instead of how long the program takes to get more reliable results.
 Using `cg_annotate` you can display the results.
@@ -106,6 +106,21 @@ Ir                       file:function
    550,000,044 ( 0.59%)  /home/cb76/cb761226/perf-oriented-dev/exercises/12/lua-5.4.6/src/lvm.c:luaV_tointeger
 ```
 
+#### Massif
+
+Massif was used to analyse the allocation behaviour of the interpreter for the different implementations.
+The only implementation which looks like it would benefit from a more performant allocator is the `tail` implementation.
+
+##### Naive
+![naive implementation](./massif/massif_visualizer_naive.png)
+##### Tail
+![tail recursive implementation](./massif/massif_visualizer_tail.png)
+##### Iter
+![iterative implementation](./massif/massif_visualizer_iter.png)
+
+##### Original implementation
+![iterative implementation](./massif/massif_visualizer_fib.png)
+
 ##### Results
 
 According to the measurements the following functions should be optimized for each variant:
@@ -125,11 +140,16 @@ According to the measurements the following functions should be optimized for ea
   - luaD_precall
   - luaV_tointeger
 
+
+  For `massif` we can see that the tail recursive has some fluctuations and therefore might benefit from an allocator change.
+
 ##### Result Quality
 
 The result is sufficient to decide optimization decisions on, as it shows the hottest functions, where they are executed and how much time they each take.
-Because the benchmarks were done seperately for each fibonnaci variant we also know which functions are important for which variant.
+Because the benchmarks were done separately for each Fibonacci variant we also know which functions are important for which variant.
 Since this is theoretically only simulated, optimizing branches is not possible but would not really be viable for an interpreter anyway.
+
+For massif, this is also a sufficient input as we can analyse the allocation behaviour in great detail.
 
 ### C) Code Understanding
 
@@ -146,6 +166,44 @@ Since this is theoretically only simulated, optimizing branches is not possible 
   This import converts the giant switch case in `lvm.c` on line 1183 to the 1896 into a giant label table and `goto` statements by redefining the `vmdispatch` and `vmcase` macros.
 
 ### D) Optimization
+We tested the base lua implementation with multiple compilers in part A), we tested multiple compilers and compiler-versions.
+The one that performed best is [GCC 12.2 with jump table enabled](#gcc-122---with-jump-table). This is our baseline.
+
+#### Different Allocators
+The benchmark program was tested with both `rpmalloc` and `mimalloc`. Every single execution appears to be slower than the original.
+
+    baseline
+    100 x fibonacci_naive(30)     time:  12.2925 s  --  832040
+    10000000 x fibonacci_tail(30) time:  12.5735 s  --  832040
+    25000000 x fibonacci_iter(30) time:  10.8962 s  --  832040
+
+    testing rpmalloc
+    100 x fibonacci_naive(30)     time:  12.3677 s  --  832040
+    10000000 x fibonacci_tail(30) time:  12.6497 s  --  832040
+    25000000 x fibonacci_iter(30) time:  10.9380 s  --  832040
+
+    testing mimalloc
+    100 x fibonacci_naive(30)     time:  12.4330 s  --  832040
+    10000000 x fibonacci_tail(30) time:  12.6930 s  --  832040
+    25000000 x fibonacci_iter(30) time:  11.0316 s  --  832040
+
+
+#### Compiler Options
+
+We also tried a number of compiler options as well as removing some that were present in the original `Makefile`.
+
+- remove `-DLUA_COMPAT_5_3`: lead to minimal performance improvements.
+- changing `-cstd=` to `c11` as well as `c17`: lead to performance regression.
+- `-fearly-inlining` `-fmerge-all-constants` `-finline-limit=300`: also did not lead to any performance improvements.
+
+
+#### Reordering
+Finn?
+
+### Evaluation
+Unfortunately non of the routs we chose for optimisation lead to any significant performance improvements.
+Source code optimization proved to be rather difficult due to the complexity of the project and difficulty to understand the implications of code changes.
+
 ====================================== Finn
 ## Profiling
 ### gprof
@@ -162,7 +220,5 @@ Since this is theoretically only simulated, optimizing branches is not possible 
 10000000 x fibonacci_tail(30) time:  12.2872 s  --  832040
 25000000 x fibonacci_iter(30) time:  12.0387 s  --  832040
 ```
-
-### `luaD_pretailcall`
 
 Looking into gprof a lot time is spent in `ldo.c:543  luaD_pretailcall()`.
