@@ -151,6 +151,12 @@ Since this is theoretically only simulated, optimizing branches is not possible 
 
 For `massif`, this is also a sufficient input as we can analyse the allocation behaviour in great detail.
 
+#### gprof
+
+Using gprof the callgraph looks as follows
+
+![](./baseline/output.png)
+
 ### C) Code Understanding
 
 - Major Phases of Lua Interpreter:
@@ -159,11 +165,13 @@ For `massif`, this is also a sufficient input as we can analyse the allocation b
   - Parsing `lparser.c`
   - Execution `lua_pcallk` in `lua.c`
 
-- LUA_USE_JUMPTABLE is a Compile Flag that is enabled in GCC by default.
+- LUA_USE_JUMPTABLE is defined in `lvm.c` and defaults to 1 if not defined otherwise.
 
-  If it is set it imports the `ljumptab.h` on line 1153 of `lvm.c`.
+  If it is equal to 1, it imports the `ljumptab.h` on line 1153 of `lvm.c`.
 
   This import converts the giant switch case in `lvm.c` on line 1183 to the 1896 into a giant label table and `goto` statements by redefining the `vmdispatch` and `vmcase` macros.
+
+  This behaviour can be *disabled* by setting the flag when compiling.
 
 ### D) Optimization
 We tested the base lua implementation with multiple compilers in part A), we tested multiple compilers and compiler-versions.
@@ -198,27 +206,25 @@ We also tried a number of compiler options as well as removing some that were pr
 
 
 #### Reordering
-Finn?
+
+looking deeper into `luaV_execute` using the kcachegrind gui, two function stick out:
+
+##### naive
+![naive](./cachegrind/naive.png)
+##### tail
+![tail](./cachegrind/tail.png)
+##### iter
+![iter](./cachegrind/iter.png)
+
+The idea now was, to change the main execution loop, such that the check for add opcodes is faster.
+
+For the lua implementation without jumptable, this should be easely achievable, by moving the cases for `OP_ADD/OP_ADDI` up. 
+This isn't better then the baseline.
+
+For the jumptable implementation we tried to change the internal opcodes such that the add codes are the 0th and 1th operations. 
+For this a lot of files had to be changed, including the parser and the translation from internal codes. 
+We didn't mange to get it to a point where it increases performance.
 
 ### Evaluation
 Unfortunately none of the routs we chose for optimisation lead to any significant performance improvements.
 Source code optimization proved to be rather difficult due to the complexity of the project and difficulty to understand the implications of code changes.
-
-====================================== Finn
-## Profiling
-### gprof
-
-![](./output.png)
-
-`cat gprof.log | gprof2dot | dot -Tpng -o output.png`
-
-## Performance optimizations:
-
-### Baseline
-```
-100 x fibonacci_naive(30)     time:  13.2963 s  --  832040
-10000000 x fibonacci_tail(30) time:  12.2872 s  --  832040
-25000000 x fibonacci_iter(30) time:  12.0387 s  --  832040
-```
-
-Looking into gprof a lot time is spent in `ldo.c:543  luaD_pretailcall()`.
