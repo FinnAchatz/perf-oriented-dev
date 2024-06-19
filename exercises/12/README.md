@@ -165,7 +165,12 @@ Using gprof the callgraph looks as follows
   - Parsing `lparser.c`
   - Execution `lua_pcallk` in `lua.c`
 
-- LUA_USE_JUMPTABLE is defined in `lvm.c` and defaults to 1 if not defined otherwise.
+
+  #### Benchmark Phases
+  Looking at the cachegrind output we can clearly see that for the short program we were given,
+  the execution phase dominates the execution time with more than 90%. For our small program, the other phases are negligible.
+
+- LUA_USE_JUMPTABLE is defined in `lvm.c` and defaults to 1 if not defined explicitly.
 
   If it is equal to 1, it imports the `ljumptab.h` on line 1153 of `lvm.c`.
 
