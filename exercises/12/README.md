@@ -225,6 +225,14 @@ For the jumptable implementation we tried to change the internal opcodes such th
 For this a lot of files had to be changed, including the parser and the translation from internal codes. 
 We didn't mange to get it to a point where it increases performance.
 
+### Hash Function Optimization
+
+One function that consistently took some time in all variants was `luaH_getshortstr`.
+This function tries to get a string from the global string table.
+The idea was to optimize the Hash-function that was called quite often.
+
+In the end this did not work out as there were too many strings in this table which using this simplified hash function lead to more collisions and thus deterriated performance.
+
 ### Evaluation
 Unfortunately none of the routs we chose for optimisation lead to any significant performance improvements.
 Source code optimization proved to be rather difficult due to the complexity of the project and difficulty to understand the implications of code changes.
