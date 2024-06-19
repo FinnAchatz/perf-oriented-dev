@@ -1,3 +1,5 @@
+Team: Finn Achatz, Emanuel Prader und David Rieser
+
 ### A) Setup and Basic Execution
 
 ##### GCC 12.2 - No Jump Table
